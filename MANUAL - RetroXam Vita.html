@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang='es'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>MANUAL - RetroXam Vita</title>
+<style>
+:root{--bg:#f7f5fb;--fg:#17151f;--card:#ffffff;--bd:#e6e1f0;--dim:#5b5470;--ac:#6d28d9;--ac2:#8b5cf6;--codebg:#1e1e2e;--codefg:#e2e8f0;--th:#f3e8ff;--stripe:#faf8ff}
+@media (prefers-color-scheme: dark){:root{--bg:#131019;--fg:#ede9f7;--card:#1c1827;--bd:#2f2943;--dim:#a79ec6;--ac:#8b5cf6;--ac2:#a78bfa;--codebg:#0d0b13;--codefg:#e2e8f0;--th:#241d38;--stripe:#191524}}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;max-width:940px;margin:0 auto;padding:26px 20px 90px;line-height:1.68;background:var(--bg);color:var(--fg)}
+.banner{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border-radius:16px;padding:24px 28px;margin:0 0 18px;box-shadow:0 6px 24px rgba(109,40,217,.25)}
+.banner h1{margin:0;font-size:1.6em;line-height:1.3;border:0;padding:0;background:none}
+.banner .sub{opacity:.93;margin-top:8px;font-size:.98em}
+.toc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 22px;margin:18px 0 10px}
+.toc h2{margin:0 0 6px;font-size:1.05em;color:var(--ac);background:none;border:0;padding:0}
+.toc ol{margin:6px 0 2px;padding-left:22px}
+@media (min-width:680px){.toc ol{columns:2;column-gap:34px}}
+.toc li{margin:3px 0}
+.toc a{color:var(--fg);text-decoration:none;border-bottom:1px dotted var(--dim)}
+.toc a:hover{color:var(--ac);border-bottom-color:var(--ac)}
+section{scroll-margin-top:14px}
+h1{font-size:1.5em;border-bottom:3px solid var(--ac);padding-bottom:8px}
+h2{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#fff;padding:10px 16px;border-radius:10px;margin-top:42px;font-size:1.22em;scroll-margin-top:14px}
+h2 .up{float:right;color:#fff;opacity:.65;text-decoration:none;font-weight:400}
+h2 .up:hover{opacity:1}
+h3{color:var(--ac);margin-top:30px;font-size:1.08em}
+code,pre{background:var(--codebg);color:var(--codefg);border-radius:6px;font-family:'Cascadia Code',Consolas,monospace;font-size:.9em}
+code{padding:2px 6px}
+pre{padding:13px 15px;overflow-x:auto;border:1px solid #2c2c40}
+table{border-collapse:collapse;width:100%;margin:14px 0;background:var(--card);border-radius:10px;overflow:hidden}
+th,td{border:1px solid var(--bd);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--th);color:var(--ac);font-size:.95em}
+tr:nth-child(even) td{background:var(--stripe)}
+blockquote{border-left:4px solid var(--ac2);background:rgba(139,92,246,.12);margin:14px 0;padding:10px 18px;border-radius:0 10px 10px 0}
+blockquote p{margin:6px 0}
+li{margin:5px 0}
+li ul{margin:3px 0 6px}
+hr{border:none;border-top:2px dashed var(--bd);margin:36px 0}
+a{color:var(--ac)}
+.upbtn{position:fixed;right:18px;bottom:18px;background:var(--ac);color:#fff;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.35em;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.upbtn:hover{background:var(--ac2)}
+</style></head><body id='top'>
+<div class="banner"><h1>🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v3.0)</h1><div class="sub">Guia completa paso a paso &middot; RetroXam para PS Vita</div></div>
+<nav class="toc" id="indice"><h2>&#128209; &Iacute;ndice (haz clic para saltar)</h2><ol><li><a href="#s1">⚡ QUÉ HAY QUE HACER — el resumen</a></li>
+<li><a href="#s2">📦 Lo que necesitas</a></li>
+<li><a href="#s3">🛠️ PARTE 0 — Liberar la Vita (solo si no lo está)</a></li>
+<li><a href="#s4">💾 PARTE 1 — SD2Vita (la memoria de verdad)</a></li>
+<li><a href="#s5">📁 PARTE 2 — Instalar TODO desde el PC (1 paso) ⚡</a></li>
+<li><a href="#s6">⚙️ PARTE 3 — Instalar los VPKs</a></li>
+<li><a href="#s7">🎨 PARTE 4 — Bezels y shaders (AUTO — cortesía de la v2.4)</a></li>
+<li><a href="#s8">🧬 PARTE 5 — BIOS</a></li>
+<li><a href="#s9">🚀 PARTE 6 — El launcher RetroXam (tu centro de juegos)</a></li>
+<li><a href="#s10">🎮 PARTE 7 — PSP (Adrenaline: NATIVO)</a></li>
+<li><a href="#s11">🕹️ PARTE 8 — Dreamcast (Flycast, experimental)</a></li>
+<li><a href="#s12">🛰️ Usar RetroXam FUERA de casa (y compartirlo)</a></li>
+<li><a href="#s13">🔌 El PUENTE por PC (para redes que bloquean archive.org)</a></li>
+<li><a href="#s14">💻 PARTE 9 — Descargar en masa desde el PC (opcional)</a></li>
+<li><a href="#s15">✨ PARTE 10 — Toques finales</a></li>
+<li><a href="#s16">🛍️ EXTRA — PSVitaAlive (la tienda de homebrew)</a></li>
+<li><a href="#s17">🧾 Resumen: qué emulador usa cada sistema</a></li>
+<li><a href="#s18">🔧 Problemas típicos</a></li>
+<li><a href="#s19">🖼️ EXTRA 2 — Bezels estilo RetroXam (referencia)</a></li>
+<li><a href="#s20">🌈 EXTRA 3 — Shaders (scanlines CRT / LCD) — referencia</a></li></ol></nav>
+<p>Con este manual tu PS Vita queda con:</p>
+<ul><li><strong>El launcher RetroXam v3.0</strong>: buscas el juego, pulsas X, se descarga y se abre solo. Con <strong>carátulas</strong>, iconos, temas y <strong>AUTO-CONFIG</strong> (bezels + shaders se instalan solos).</li><li><strong>RetroArch</strong> (132 cores) → NES, SNES, GB/GBC/GBA, Mega Drive, Mega CD, 32X, PSX, Neo Geo, CPS-1/2/3 y FBNeo — y <strong>SHADERS</strong> con la build Piglet.</li><li><strong>DaedalusX64</strong> → Nintendo 64 · <strong>OpenBOR</strong> → beats 'em up · <strong>PSVitaAlive</strong> → tienda de homebrew.</li><li><strong>PSP</strong> (vía <strong>Adrenaline</strong>, ¡NATIVO, no emulado!) y <strong>Dreamcast</strong> (vía <strong>Flycast</strong>, juegos compatibles).</li><li><strong>~2.200 juegos</strong> seleccionados (<strong>18 sistemas</strong>), con <strong>prioridad a versiones en español</strong>.</li></ul>
+<blockquote>📖 <strong>Este manual también existe en HTML con índice</strong> (haz clic para saltar de sección): <code>MANUAL - RetroXam Vita.html</code>.</blockquote>
+<hr>
+<section id="s1"><h2>⚡ QUÉ HAY QUE HACER — el resumen<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<ol><li><strong>¿La Vita no está liberada?</strong> → Parte 0 (10 minutos, una vez en la vida).</li><li><strong>microSD + SD2Vita</strong> montados con YAMT → Parte 1.</li><li><strong>Instalador del PC en 1 paso</strong> — copia TODO solo (configs, BIOS, N64, carátulas, plugins): por <strong>USB (rápido)</strong> o <strong>FTP</strong> → Parte 2.</li><li><strong>REINICIA la consola UNA vez</strong> (activa los plugins del Dreamcast).</li><li><strong>Instala los VPKs con X</strong>, en orden → Parte 3.</li><li><strong>Abre RetroXam</strong> (con WiFi) → se auto-configura → elige un juego → <strong>X</strong> → ¡a jugar! 🎉</li></ol>
+<blockquote>Los BIOS ya van incluidos por el instalador, y el "1 toque" de PSP o la tienda son extras opcionales. Nada más que hacer.</blockquote>
+<hr>
+</section>
+<section id="s2"><h2>📦 Lo que necesitas<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<table>
+<tr><th>Cosa</th><th>Detalle</th></tr>
+<tr><td>PS Vita</td><td>Cualquier modelo. Si no está liberada → Parte 0</td></tr>
+<tr><td>microSD + SD2Vita</td><td><strong>Muy recomendado</strong> (128 GB+). El kit + juegos no caben en la tarjeta oficial</td></tr>
+<tr><td>PC Windows + cable USB</td><td>También vale por WiFi (FTP)</td></tr>
+<tr><td>Kit RetroXam Vita</td><td>Escritorio: acceso directo <strong>"Kit RetroXam Vita"</strong>, o la carpeta <code>C:\Users\XAM-PC\VitaKit\apps</code></td></tr>
+</table>
+<p><strong>Contenido del kit:</strong></p>
+<table>
+<tr><th>Archivo</th><th>Qué es</th><th>Tamaño</th></tr>
+<tr><td><code>RetroXam.vpk</code></td><td>El launcher (<strong>v2.4</strong>: + <strong>PSP y Dreamcast</strong>, auto-config de bezels/shaders, menú de 18 sistemas)</td><td>5 MB</td></tr>
+<tr><td><code>RetroArch_piglet.vpk</code></td><td>RetroArch <strong>CON shaders</strong> (la recomendada)</td><td>~473 MB</td></tr>
+<tr><td><code>RetroArch.vpk</code></td><td>RetroArch "normal" (alternativa; sin menú de shaders)</td><td>~646 MB</td></tr>
+<tr><td><code>PIBConfig.vpk</code></td><td>Librerías que exige la build piglet (se abre <strong>una vez</strong>)</td><td>2 MB</td></tr>
+<tr><td><code>DaedalusX64.vpk</code> + <code>DaedalusX64-data.zip</code></td><td>Emulador + datos de Nintendo 64</td><td>3 MB + 75 MB</td></tr>
+<tr><td><code>OpenBOR.vpk</code></td><td>Motor Beats of Rage</td><td>1 MB</td></tr>
+<tr><td><code>Adrenaline.vpk</code> + <code>661.PBP</code></td><td><strong>PSP nativo</strong> (el firmware se baja solo; 661.PBP es el plan B)</td><td>0,5 + 31 MB</td></tr>
+<tr><td><code>Flycast.vpk</code></td><td>Dreamcast (experimental — solo juegos compatibles)</td><td>4,6 MB</td></tr>
+<tr><td><code>ShaRKBR33D.vpk</code></td><td>Librería <code>libshacccg.suprx</code> que exigen Daedalus y los shaders (se abre <strong>una vez</strong>)</td><td>1,5 MB</td></tr>
+<tr><td><code>Plugins\</code></td><td><strong>kubridge + fd_fix</strong> (¡imprescindibles para Flycast!) + AutoPlugin2 + iTLS-Enso — <strong>el instalador los configura solo</strong></td><td>15 MB</td></tr>
+<tr><td><code>PSVitaAlive.vpk</code></td><td><strong>Tienda de homebrew</strong> para la Vita (catálogo abierto; se actualiza sola) — opcional</td><td>8 MB</td></tr>
+<tr><td><code>Config_RetroXam_Piglet.zip</code></td><td>Bezels + shaders + ajustes por core (v1.1) como respaldo manual</td><td>0,7 MB</td></tr>
+<tr><td><code>RetroXamVita_Covers.zip</code></td><td>Las 2.151 carátulas de todos los sistemas (opcional: se descargan solas)</td><td>54 MB</td></tr>
+<tr><td><code>PSP_1toque\</code></td><td><strong>Extra opcional</strong>: lanzar juegos PSP directos desde RetroXam (ABM + AdrenalineLauncher + LEEME)</td><td>11 MB</td></tr>
+<tr><td><code>INSTALAR VITA (USB - rapido).bat</code></td><td>Instalador de PC en 1 paso por <strong>USB</strong> (la vía rápida)</td><td>—</td></tr>
+<tr><td><code>INSTALAR VITA.bat</code></td><td>Instalador de PC en 1 paso por <strong>FTP</strong> (sin cable)</td><td>—</td></tr>
+</table>
+<hr>
+</section>
+<section id="s3"><h2>🛠️ PARTE 0 — Liberar la Vita (solo si no lo está)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<blockquote>Si ya tienes <strong>Enso</strong> instalado (se ve "HENkaku" en Ajustes), salta a la Parte 1.</blockquote>
+<ol><li>Mira tu firmware: <strong>Ajustes → Sistema → Información del sistema</strong>.</li></ol>
+<ul><li>HENlo funciona en <strong>3.65, 3.68 y 3.74</strong>. Si tienes otra versión, sigue la guía oficial <strong>vita.hacks.guide</strong> (te llevará a 3.65 igualmente).</li></ul>
+<ol><li>En la Vita, abre el <strong>navegador</strong> y entra en: <code>http://jailbreak.psp2.dev</code></li><li>Pulsa <strong>"Unlock my Vita" → "Unlock"</strong>. Si va bien, verás la pantalla <strong>henlo-bootstrap</strong>.</li><li>Pulsa <strong>X en "Install henkaku" → X en "Install VitaDeploy" → X en "Exit"</strong>.</li><li><strong>Ajustes → HENkaku Settings</strong> → marca <strong>"Enable Unsafe Homebrew"</strong> → cierra Ajustes.</li><li>Hazla <strong>permanente</strong> (recomendado): abre <strong>VitaDeploy → "Install a different OS" → "Quick 3.65 Install"</strong> (necesita internet):</li></ol>
+<ul><li>Espera a que descargue → <strong>X</strong> para confirmar → lee el aviso, espera 20 s → <strong>X</strong> otra vez.</li><li>⚠️ No dejes que la consola se suspenda durante el proceso. Al terminar reinicia ya con CFW (<strong>firmware 3.65 + Enso, para siempre</strong>).</li></ul>
+<ol><li>Instala <strong>VitaShell</strong> (tu gestor de archivos): <strong>VitaDeploy → App Downloader → VitaShell</strong> → descarga e instala.</li></ol>
+<blockquote>Referencia oficial (por si algo se tuerce): <strong>vita.hacks.guide</strong></blockquote>
+<hr>
+</section>
+<section id="s4"><h2>💾 PARTE 1 — SD2Vita (la memoria de verdad)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<blockquote>Si hiciste "Quick 3.65 Install", <strong>YAMT ya viene instalado</strong> — salta al paso 1.</blockquote>
+<ol><li>Mete el adaptador <strong>SD2Vita con tu microSD</strong> en la ranura de juegos.</li><li><strong>VitaDeploy → Miscellaneous → Format a storage device</strong> → Target: <code>SD2Vita</code>, Filesystem: <strong><code>TexFAT</code></strong> → <strong>"Format target storage"</strong>.</li><li>Vuelve al menú → <strong>Reboot</strong>.</li><li><strong>Ajustes → Dispositivos → Dispositivos de almacenamiento</strong> → activa <strong>"Use YAMT"</strong>:</li></ol>
+<ul><li>Deja <code>ux0:</code> en <code>Default</code> y <code>uma0:</code> en <code>SD2Vita</code> → apaga y enciende la consola.</li><li><em>(Solo si ya tenías cosas instaladas:)</em> en <strong>VitaShell</strong>, copia TODO de <code>ux0:</code> a <code>uma0:</code> (△ → Mark all → Copy → entrar en <code>uma0:</code> → △ → Paste).</li></ul>
+<ol><li>Cambia a: <strong><code>ux0:</code> → <code>SD2Vita</code></strong> y <code>uma0:</code> → <code>Default</code> → apaga y enciende.</li></ol>
+<p>   → <strong>ux0: (lo principal) ahora es tu microSD.</strong> Todo lo que sigue va ahí.</p>
+<hr>
+</section>
+<section id="s5"><h2>📁 PARTE 2 — Instalar TODO desde el PC (1 paso) ⚡<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<blockquote>El instalador deja <strong>cada cosa en su sitio, solo</strong>. Elige la vía que prefieras:</blockquote>
+<h3>🅰 USB — la vía rápida (recomendada, con cable) — ¡AHORA EN 2 PASOS! ⭐</h3>
+<p><strong>PASO 1 — las VPKs</strong> (2 min):</p>
+<ol><li>En la Vita: <strong>VitaShell → START → pon SELECT = USB → cierra con O → pulsa SELECT</strong> → conecta el cable USB. La Vita aparece como <strong>unidad</strong> (puede ser <code>P:</code>, <code>F:</code>…).</li><li>En el PC: doble clic a <strong><code>PASO 1 - VPKs a la Vita (USB).bat</code></strong> → letra de la unidad (o <strong>Enter = autodetectar</strong>).</li><li>Desconecta el USB e <strong>instala las VPKs</strong> en la Vita (Parte 3) + abre <strong>PIBConfig</strong> y <strong>ShaRKBR33D</strong> una vez cada una.</li></ol>
+<p><strong>PASO 2 — todo lo demás + config automática</strong> (5 min):</p>
+<ol><li>Vuelve a conectar el USB (mismo modo) y ejecuta <strong><code>PASO 2 - CONFIG (USB).bat</code></strong> → copia configs, BIOS, N64, carátulas, plugins… y <strong>ajusta tu RetroArch solo</strong> (driver <code>gl</code> para shaders, carpetas, combo del menú), con copia de seguridad <code>.retroxam.bak</code>.</li><li>Verás el progreso (por bloques y por MB). Al final <strong>"=== TERMINADO ==="</strong>.</li><li>Desconecta, <strong>REINICIA la consola</strong> y abre RetroXam.</li></ol>
+<p><em>(¿Repetir es seguro? Sí: cada PASO salta lo que ya está = <code>+0 copiados</code>.)</em></p>
+<h3>🅱 FTP — sin cable (por WiFi)</h3>
+<ol><li>En la Vita: <strong>VitaShell → pulsa SELECT</strong> (modo FTP) → apunta la <strong>IP</strong> que sale en pantalla.</li><li>En el PC: doble clic a <strong><code>INSTALAR VITA.bat</code></strong> → escribe la IP.</li></ol>
+<h3>📋 ¿Qué copia exactamente el instalador?</h3>
+<table>
+<tr><th>A dónde</th><th>Qué</th></tr>
+<tr><td><code>ux0:/</code></td><td>Los 11 VPKs + <code>661.PBP</code> (+ PSVitaAlive, iTLS, AutoPlugin2)</td></tr>
+<tr><td><code>ux0:/data/retroarch/</code></td><td>Bezels + shaders + ajustes por core (v1.1)</td></tr>
+<tr><td><code>ux0:/data/retroarch/system/</code></td><td>Los BIOS</td></tr>
+<tr><td><code>ux0:/data/DaedalusX64/</code></td><td>Los datos del N64 (610 archivos)</td></tr>
+<tr><td><code>ux0:/data/retroxam/</code></td><td>El ZIP completo de carátulas</td></tr>
+<tr><td><code>ux0:/tai/</code></td><td><strong>kubridge + fd_fix</strong> (Flycast) + añade las 2 líneas al <code>config.txt</code> (con copia de seguridad <code>.retroxam.bak</code>)</td></tr>
+<tr><td><code>ux0:/PSP_1toque/</code></td><td>El extra del PSP "1 toque"</td></tr>
+<tr><td><code>ux0:/data/retroarch/retroarch.cfg</code></td><td><strong>Se ajusta solo</strong> (v3.0): driver <code>gl</code> para shaders, carpetas y combo del menú — con copia <code>.retroxam.bak</code></td></tr>
+</table>
+<blockquote>🔁 <strong>Al terminar el PASO 2: REINICIA la consola UNA vez</strong> (así se activan kubridge + fd_fix y los ajustes de RetroArch).</blockquote>
+<h3>✍️ A mano (sin instalador)</h3>
+<ol><li>Copia los VPKs + <code>661.PBP</code> a <code>ux0:/</code>.</li><li><code>DaedalusX64-data.zip</code>: extráelo y copia la carpeta <strong><code>DaedalusX64</code></strong> a <code>ux0:/data/</code>.</li><li>Config/BIOS/carátulas: sigue el LEEME del pack (mismos destinos que la tabla de arriba).</li></ol>
+<hr>
+</section>
+<section id="s6"><h2>⚙️ PARTE 3 — Instalar los VPKs<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<p>En <strong>VitaShell</strong>, ve a <code>ux0:/</code> y pulsa <strong>X sobre cada .vpk</strong> → confirma. <strong>En este orden</strong>:</p>
+<blockquote>💡 <strong>Flujo 2 PASOS</strong>: instala las VPKs <strong>entre el PASO 1 y el PASO 2</strong> (así el PASO 2 lo configura todo con RetroArch ya instalado).</blockquote>
+<ol><li><code>RetroXam.vpk</code> — el launcher (v2.4)</li><li><code>PIBConfig.vpk</code> — <strong>ábrelo y pulsa X</strong> (1 segundo; instala las librerías). Cierra.</li><li><code>RetroArch_piglet.vpk</code> — la build con shaders (si ya tenías RetroArch, esta la <strong>sustituye</strong>; tus juegos y ajustes se quedan)</li><li><code>ShaRKBR33D.vpk</code> — <strong>ábrelo una vez</strong> (instala <code>libshacccg.suprx</code>, lo exigen Daedalus y los shaders). Tarda un minuto.</li><li><code>DaedalusX64.vpk</code> — N64</li><li><code>OpenBOR.vpk</code> — beats 'em up</li><li><code>Adrenaline.vpk</code> — <strong>ábrelo y pulsa X</strong> (baja el firmware solo; necesita internet). PSP nativo.</li><li><code>Flycast.vpk</code> — Dreamcast</li><li><code>PSVitaAlive.vpk</code> — <strong>opcional</strong>: la tienda de homebrew</li><li><code>iTLS-Enso.vpk</code> + <code>AutoPlugin2.vpk</code> — <strong>opcionales</strong>: internet moderno (tienda) y gestor de plugins</li></ol>
+<blockquote>Si alguna burbuja no aparece: en VitaShell pulsa <strong>△ → Refresh livearea</strong>.</blockquote>
+<p>&gt;</p>
+<blockquote><strong>N64</strong>: los datos van <strong>solos</strong> con el instalador (queda <code>ux0:/data/DaedalusX64/</code>). Y ejecuta <strong>ShaRKBR33D</strong> UNA vez (sin su librería, Daedalus da el error <strong>C2-12828-1</strong>).</blockquote>
+<hr>
+</section>
+<section id="s7"><h2>🎨 PARTE 4 — Bezels y shaders (AUTO — cortesía de la v2.4)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<p><strong>No tienes que hacer nada</strong>: el instalador ya copia la config, y ADEMÁS al abrir RetroXam por primera vez (con WiFi) el launcher <strong>se auto-configura</strong>: verás <em>"Instalando config RetroXam (bezels + shaders)..."</em> — una única vez.</p>
+<ul><li>✅ <strong>Bezels</strong>: marcos con el logo de cada consola y la seta 1-UP 🍄 en NES, SNES, GB/GBC, GBA, Mega Drive/CD, 32X, PSX, NeoGeo/Arcade y CPS-1/2 (el juego va dentro de su ventana exacta).</li><li>✅ <strong>Shaders</strong>: CRT para las de TV (crt-pi), LCD para Game Boy (lcd3x) y nitidez para GBA (sharp-bilinear). Se activan por core solos.</li><li><strong>Respaldo manual</strong> (solo si algo fallara): extraer <code>Config_RetroXam_Piglet.zip</code> en <code>ux0:/data/retroarch/</code> con VitaShell.</li><li><strong>Cambiar shader a mano</strong>: con un juego abierto → <strong>Quick Menu → Shaders</strong> (solo existe en la build piglet ✓) → elige otro → guarda con <strong>Save Core Override</strong>.</li><li>¿Imagen <strong>desplazada</strong> alguna vez (raro, le pasa a algún core)? <strong>1º cierra y reabre el juego</strong> (suele recentrarse solo). Si sigue: con el juego abierto <strong>L + R + START + SELECT</strong> = menú → <strong>Ajustes → Vídeo → Escalado</strong> → "Relación de aspecto: <strong>Personalizada</strong>" + viewport de su sistema (4:3 = 120/2/720/540 · GB/GBC = 240/56/480/432 · GBA = 156/56/648/432) → Quick Menu → Overrides → <strong>Save Core Override</strong>.</li></ul>
+<hr>
+</section>
+<section id="s8"><h2>🧬 PARTE 5 — BIOS<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<p>Copia en <strong><code>ux0:/data/retroarch/system/</code></strong> (créala si no existe). <strong>Con el instalador ya van incluidos</strong>:</p>
+<table>
+<tr><th>Archivo</th><th>Para</th><th>¿Obligatorio?</th></tr>
+<tr><td><code>SCPH1001.BIN</code></td><td>PlayStation (pcsx_rearmed)</td><td>Muy recomendado</td></tr>
+<tr><td><code>bios_CD_E.bin</code> + <code>bios_CD_U.bin</code> + <code>bios_CD_J.bin</code></td><td>Mega CD (genesis_plus_gx)</td><td><strong>Sí</strong> para jugar Mega CD (una por región: EU/US/JAP)</td></tr>
+<tr><td><code>neogeo.zip</code></td><td>Neo Geo</td><td>El launcher la baja sola la 1ª vez; mejor tenerla</td></tr>
+<tr><td><code>gba_bios.bin</code></td><td>Game Boy Advance (mejor compatibilidad)</td><td>Opcional</td></tr>
+</table>
+<blockquote>Los BIOS se sacan de tu propia consola o de copias legales.</blockquote>
+<hr>
+</section>
+<section id="s9"><h2>🚀 PARTE 6 — El launcher RetroXam (tu centro de juegos)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<ol><li>Abre <strong>RetroXam</strong> desde la pantalla de inicio.</li></ol>
+<blockquote>✨ <strong>Novedad v3.0</strong>: interfaz nueva estilo PS5 — cabecera con reloj grande, tarjetas redondeadas y menú-biblioteca con acento de color por sistema.</blockquote>
+<ol><li><strong>Activa el WiFi</strong>: la primera vez que entres a cada sistema baja su lista desde GitHub (luego queda guardada). Si te falta alguna lista, <strong>SELECT → Actualizar listas</strong>.</li><li>Controles:</li></ol>
+<table>
+<tr><th>Botón</th><th>Acción</th></tr>
+<tr><td><strong>X</strong></td><td>Descarga el juego (si falta) y lo abre en su emulador, ya cargado</td></tr>
+<tr><td><strong>Cuadrado</strong></td><td><strong>Buscar</strong> un juego por nombre (teclado en pantalla)</td></tr>
+<tr><td><strong>Cuadrado (mantener ~1 s)</strong></td><td>Añadir/quitar el juego de <strong>★ Favoritos</strong></td></tr>
+<tr><td><strong>Triángulo</strong></td><td>Recargar la lista del sistema</td></tr>
+<tr><td><strong>Triángulo (mantener ~1 s)</strong></td><td><strong>Borrar</strong> el juego de la consola</td></tr>
+<tr><td><strong>Arriba/Abajo</strong></td><td>Mover por la lista · <strong>Izq/Der</strong> = saltar 10</td></tr>
+<tr><td><strong>L / R</strong></td><td>Cambiar de sistema (consola)</td></tr>
+<tr><td><strong>SELECT</strong></td><td><strong>Menú</strong>: sistemas, buscar, favoritos, descargados, ajustes y prueba de red</td></tr>
+<tr><td><strong>START</strong></td><td>Mostrar/ocultar la ayuda</td></tr>
+<tr><td><strong>O</strong></td><td>Salir (o cancelar una descarga en curso)</td></tr>
+</table>
+<blockquote>🆕 <strong>v2.4 — PSP y Dreamcast + auto-config</strong>: los sistemas nuevos salen en el menú (iconos oficiales). Al pulsar X en un juego <strong>PSP</strong> se baja a <code>ux0:/pspemu/ISO/</code> y — con el extra "1 toque" — <strong>arranca directo</strong>; sin el extra se abre Adrenaline para elegirlo. Los juegos de <strong>Dreamcast</strong> arrancan directos con Flycast. Y el launcher <strong>se auto-configura</strong> (bezels+shaders) la primera vez.</blockquote>
+<blockquote>🆕 <strong>v2.3 — descargas a prueba de balas</strong>: descargas <strong>por trozos</strong>: progreso en vivo, <strong>cancelar con O</strong> (se conserva lo bajado) y <strong>reanudar</strong> donde iba al reintentar. Pantalla <strong>Descargados</strong> (míralo con su tamaño y borra). Al abrir un juego, RetroXam <strong>se cierra solo</strong>. Burbuja/fondo con la seta 1-UP 🍄.</blockquote>
+<ol><li>Leyenda: <strong><code>+</code></strong> = ya en la Vita · <strong><code>-</code></strong> = pendiente · <strong><code>★</code></strong> = favorito · <strong><code>ES</code></strong> = versión en español · punto de color = WiFi. Arriba: reloj, batería y espacio libre.</li><li><strong>Carátulas</strong>: el panel derecho muestra la portada del juego (se descarga sola con WiFi). ¿Todas de golpe? Descomprime <code>RetroXamVita_Covers.zip</code> en <code>ux0:/data/retroxam/</code>.</li><li><strong>Descargas robustas</strong>: primero el <strong>PUENTE del PC/Mac</strong>, luego http/https directos. ¿Algo falla? Menú → <strong>START</strong> = prueba de red; <strong>Ajustes → Ver registro</strong> (<code>ux0:/data/retroxam/retroxam.log</code>).</li><li>Los juegos se guardan en <code>ux0:/data/retroxam/roms/&lt;sistema&gt;/</code> (los de PSP, en <code>ux0:/pspemu/ISO/</code>). Los multi-disco crean su <code>.m3u</code> solos (y el aviso te dice cuántos discos son).</li><li><strong>Sistemas incluidos (18)</strong>: NES · SNES · GB · GBC · GBA · N64 · Mega Drive · Mega CD · 32X · PSX · Neo Geo · CPS-1 · CPS-2 · CPS-3 · FBNeo · OpenBOR · <strong>PSP</strong> · <strong>Dreamcast</strong> (~2.200 juegos).</li></ol>
+<hr>
+</section>
+<section id="s10"><h2>🎮 PARTE 7 — PSP (Adrenaline: NATIVO)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<p>La Vita lleva el chip de PSP dentro: Adrenaline lo usa directamente. Compatibilidad prácticamente total.</p>
+<ol><li>Si no lo has hecho: abre <strong>Adrenaline</strong> una vez → <strong>X</strong> (baja el firmware solo, ~1 min). <em>(Plan B sin internet: copia <code>661.PBP</code> a <code>ux0:/app/PSPEMUCFW/661.PBP</code> y abre Adrenaline.)</em></li><li>En <strong>RetroXam → PSP</strong>: elige un juego → X. Se descarga a <code>ux0:/pspemu/ISO/</code> solo.</li><li><strong>Abrir directo ("1 toque", opcional)</strong>: sigue <code>PSP_1toque\LEEME</code> (instala AdrenalineBubbleManager — pone los módulos sola — e instala <code>AdrenalineLauncher.vpk</code>). Con eso, X en RetroXam abre el juego <strong>directo, sin menús</strong>.</li><li>Sin el extra: RetroXam abre <strong>Adrenaline</strong> y eliges el juego en <strong>Game → Memory Stick</strong> (están todos en <code>ux0:/pspemu/ISO/</code>).</li><li>A mano también puedes copiar tus propios <code>.iso</code>/<code>.cso</code> a <code>ux0:/pspemu/ISO/</code>.</li></ol>
+<blockquote>Los juegos PSP pesan ~1,5 GB de media y son <strong>216 GB</strong> la lista completa: baja solo los que quieras (el launcher te avisa del tamaño).</blockquote>
+<hr>
+</section>
+<section id="s11"><h2>🕹️ PARTE 8 — Dreamcast (Flycast, experimental)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<ol><li>En <strong>RetroXam → Dreamcast</strong>: elige un juego → X. Se descarga y <strong>arranca directo</strong> con Flycast.</li><li>La lista incluye <strong>solo los juegos compatibles</strong> con Flycast Vita (79, con nivel documentado: 32 fluidos / 43 jugables / 4 justos).</li><li>Los multidisco (Resident Evil CV, Skies of Arcadia) bajan todos los discos y crean su <code>.m3u</code>.</li><li>Es <strong>experimental</strong> en la Vita (~50%): empieza por los 2D, fighting y carreras ligeras. Si un juego va con tirones, no es tu Vita — es el emulador.</li></ol>
+<blockquote>🔧 Flycast necesita <strong>kubridge + fd_fix</strong>: el instalador los deja configurados solos. Si algún día ves el error <em>"kubridge.skprx is outdated"</em>, pasa otra vez el instalador (pone la versión buena) y reinicia.</blockquote>
+<hr>
+</section>
+<section id="s12"><h2>🛰️ Usar RetroXam FUERA de casa (y compartirlo)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<ul><li><strong>Los puentes de tu casa</strong> (<code>192.168.2.…</code>) solo existen en tu red local: fuera <strong>no se ven, y es normal</strong>.</li><li>Fuera quedan dos vías: el <strong>acceso público del Mac</strong> (<code>https://servi.tail31979d.ts.net:10000</code>, ya viene dentro de la app) — necesita el <strong>Mac encendido</strong> — y <strong>archive.org directo</strong> (solo si ese WiFi no lo bloquea; muchos proveedores españoles lo capan los findes de partido).</li><li><strong>v3.0</strong>: al empezar una descarga, el launcher <strong>prueba los espejos y salta los que no responden</strong> (la primera descarga tarda unos segundos más; después va directo a lo que funciona).</li><li><strong>Para compartir</strong>: el acceso público va dentro del pack → <strong>otra Vita solo tiene que instalar y jugar</strong>. (También puede poner su propio puente en <strong>Ajustes → Puente</strong>.)</li><li>Truco: desde el móvil abre <code>https://servi.tail31979d.ts.net:10000/ping</code> → si responde, la puerta pública está abierta.</li></ul>
+<hr>
+</section>
+<section id="s13"><h2>🔌 El PUENTE por PC (para redes que bloquean archive.org)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<p>Tu red puede no dejar a la Vita conectar con archive.org (es lo que te pasaba). El <strong>puente</strong> lo resuelve: la Vita le pide el juego a tu <strong>PC/Mac</strong>, y él (que sí llega) hace de espejo.</p>
+<ul><li><strong>Ya está montado y es automático</strong>: el launcher prueba en orden el <strong>Mac Mini</strong> (siempre encendido), el <strong>PC</strong> y el <strong>acceso público</strong> del Mac. No hay que configurar nada.</li><li><strong>Requisito</strong>: que el Mac o el PC estén encendidos.</li><li>Solo si quieres <strong>cambiarlo</strong>: <strong>Ajustes → Puentes del PC/Mac</strong>, o el archivo <code>ux0:/data/retroxam/puente.txt</code>.</li><li>Comprobar: <strong>SELECT → START</strong> → debe poner <code>PC OK</code>.</li><li>Registros: PC <code>C:\Users\XAM-PC\RetroXamTools\puente.log</code> · Mac <code>~/RetroXam/puente.log</code>.</li></ul>
+<hr>
+</section>
+<section id="s14"><h2>💻 PARTE 9 — Descargar en masa desde el PC (opcional)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<blockquote>Para lotes grandes (50 de PSX, toda la SNES…). Herramientas en <code>C:\Users\XAM-PC\RetroXamTools</code>.</blockquote>
+<pre>cd C:\Users\XAM-PC\RetroXamTools
+
+:: Bajar (reanudable; --flat deja los archivos planos, como los quiere el launcher)
+python descargar_vita.py --repo https://github.com/servixam-max/RetroXamVita --out D:\VitaROMs --flat --systems nes,snes,megadrive,psp,dreamcast
+
+:: Subirlas a la Vita directo por FTP (VitaShell en modo FTP; IP en su pantalla, puerto 1337)
+python descargar_vita.py --repo https://github.com/servixam-max/RetroXamVita --out D:\VitaROMs --flat --ftp 192.168.1.50:1337 --ftp-dir /ux0:/data/retroxam/roms</pre>
+<ul><li>Si lo vuelves a lanzar, <strong>salta lo ya descargado/subido</strong>. Con <code>--limit 20</code> bajas solo 20 por sistema.</li></ul>
+<p><strong>Tamaños orientativos:</strong></p>
+<table>
+<tr><th>Sistema</th><th>Juegos</th><th>Peso</th><th>Sistema</th><th>Juegos</th><th>Peso</th></tr>
+<tr><td>NES</td><td>239</td><td>30 MB</td><td>CPS-1</td><td>38</td><td>82 MB</td></tr>
+<tr><td>SNES</td><td>239</td><td>364 MB</td><td>CPS-2</td><td>41</td><td>549 MB</td></tr>
+<tr><td>GB</td><td>96</td><td>21 MB</td><td>CPS-3</td><td>6</td><td>278 MB</td></tr>
+<tr><td>GBC</td><td>53</td><td>73 MB</td><td>FBNeo</td><td>220</td><td>1,0 GB</td></tr>
+<tr><td>GBA</td><td>89</td><td>3,7 GB</td><td>Neo Geo</td><td>110</td><td>2,0 GB</td></tr>
+<tr><td>N64</td><td>119</td><td>1,8 GB</td><td>PSX</td><td>238</td><td>86,7 GB</td></tr>
+<tr><td>Mega Drive</td><td>186</td><td>168 MB</td><td>Mega CD</td><td>43</td><td>9,7 GB</td></tr>
+<tr><td>32X</td><td>38</td><td>119 MB</td><td>OpenBOR</td><td>120</td><td>17,1 GB</td></tr>
+<tr><td><strong>PSP</strong></td><td><strong>225</strong></td><td><strong>~217 GB</strong></td><td><strong>Dreamcast</strong></td><td><strong>79</strong></td><td><strong>~35 GB</strong></td></tr>
+</table>
+<blockquote>Total retro ≈ <strong>124 GB</strong> — no hace falta todo. Gracias al <code>--flat</code>, el launcher las marcará como <strong><code>+</code></strong> y las abrirá al instante.</blockquote>
+<hr>
+</section>
+<section id="s15"><h2>✨ PARTE 10 — Toques finales<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<ul><li><strong>RetroArch</strong>: no hace falta tocar nada — el launcher le pasa el core correcto y los ajustes se guardan solos. <em>(Tu config de bezels/shaders la mantiene la v2.4 sola.)</em></li><li><strong>DaedalusX64</strong>: no todos los juegos de N64 van finos en la Vita (es normal). También puedes meter ROMs a mano en <code>ux0:/data/DaedalusX64/roms/</code>.</li><li><strong>OpenBOR</strong>: los <code>.pak</code> se copian solos a <code>ux0:/data/openbor/paks/</code>.</li><li><strong>Mandos</strong>: la Vita usa sus controles; en RetroArch puedes reasignar en Settings → Input.</li></ul>
+<hr>
+</section>
+<section id="s16"><h2>🛍️ EXTRA — PSVitaAlive (la tienda de homebrew)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<ul><li><strong>Qué es</strong>: un catálogo abierto de homebrew para la Vita ("Keep PlayStation Vita Alive") — descubres e instalas apps desde la propia consola. Se <strong>actualiza sola</strong>.</li><li><strong>Instalarla</strong>: <code>PSVitaAlive.vpk</code> (X → Install). Es opcional pero muy chula.</li><li><strong>Necesita internet moderno</strong>: instala también <strong>iTLS-Enso.vpk</strong> (el instalador ya lo sube) y reinicia. Sin él, el catálogo puede no cargar.</li></ul>
+<hr>
+</section>
+<section id="s17"><h2>🧾 Resumen: qué emulador usa cada sistema<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<table>
+<tr><th>Sistema</th><th>Emulador</th><th>Core</th></tr>
+<tr><td>NES</td><td>RetroArch</td><td>fceumm</td></tr>
+<tr><td>SNES</td><td>RetroArch</td><td>snes9x2005_plus</td></tr>
+<tr><td>GB / GBC</td><td>RetroArch</td><td>gambatte</td></tr>
+<tr><td>GBA</td><td>RetroArch</td><td>gpsp</td></tr>
+<tr><td>Mega Drive / Mega CD</td><td>RetroArch</td><td>genesis_plus_gx</td></tr>
+<tr><td>32X</td><td>RetroArch</td><td>picodrive</td></tr>
+<tr><td>PSX</td><td>RetroArch</td><td>pcsx_rearmed</td></tr>
+<tr><td>Neo Geo</td><td>RetroArch</td><td>fbneo</td></tr>
+<tr><td>CPS-1 / CPS-2</td><td>RetroArch</td><td>mame2003_plus</td></tr>
+<tr><td>CPS-3 / FBNeo</td><td>RetroArch</td><td>fbneo</td></tr>
+<tr><td>N64</td><td>DaedalusX64</td><td>—</td></tr>
+<tr><td>OpenBOR</td><td>OpenBOR</td><td>—</td></tr>
+<tr><td><strong>PSP</strong></td><td><strong>Adrenaline</strong> (nativo)</td><td>—</td></tr>
+<tr><td><strong>Dreamcast</strong></td><td><strong>Flycast</strong> (experimental)</td><td>—</td></tr>
+</table>
+<hr>
+</section>
+<section id="s18"><h2>🔧 Problemas típicos<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<table>
+<tr><th>Problema</th><th>Solución</th></tr>
+<tr><td>"No hay juegos cargados"</td><td>Sin WiFi o listas sin bajar: activa WiFi y <strong>SELECT → Actualizar listas</strong></td></tr>
+<tr><td>Un juego no arranca</td><td>Bórralo de su carpeta (mantén <strong>Triángulo</strong> en el launcher) y vuelve a descargarlo</td></tr>
+<tr><td>Sin espacio</td><td>El launcher muestra el libre arriba; borra juegos o pon una microSD mayor</td></tr>
+<tr><td>La burbuja no aparece</td><td>VitaShell → <strong>△ → Refresh livearea</strong></td></tr>
+<tr><td>Las descargas fallan</td><td>Que el Mac o el PC estén encendidos y SELECT → START diga <code>PC OK</code>. Diagnóstico: <strong>Ajustes → Ver registro</strong></td></tr>
+<tr><td><strong>Instalador USB</strong>: ¿está haciendo algo?</td><td>Ahora muestra progreso (bloques y MB). Si en una 2ª pasada todo dice <code>+0 copiados, ya estaban</code> = ya está todo ✓. El "pulsa una tecla" final es solo cerrar</td></tr>
+<tr><td><strong>USB</strong>: la Vita no aparece como unidad</td><td>VitaShell → START → SELECT = <strong>USB</strong> → O → SELECT, cable de datos, y espera; si no, usa la vía <strong>FTP</strong></td></tr>
+<tr><td>Sale la imagen <strong>desplazada</strong> de su marco (le pasa a veces a algún core, p. ej. NES)</td><td><strong>Lo más rápido</strong>: cierra RetroArch (botón PS → cierra su tarjeta) y reabre el juego desde RetroXam → vuelve centrado. <strong>A mano</strong>: con el juego abierto pulsa <strong>L + R + START + SELECT</strong> a la vez (menú) → <strong>Ajustes → Vídeo → Escalado</strong> → "Relación de aspecto: <strong>Personalizada</strong>" → pon los números de su sistema (Parte 4) → Quick Menu → Overrides → <strong>Save Core Override</strong>. <strong>Reparar la config sin PC</strong>: en VitaShell borra <code>ux0:/data/retroarch/retroxam_cfg_ver.txt</code> y abre RetroXam (verás "Instalando config RetroXam…")</td></tr>
+<tr><td><strong>PSP</strong>: no arranca directo desde RetroXam</td><td>Es lo normal sin el extra: se abre Adrenaline y eliges el juego. Para el "1 toque": instala el extra de <code>PSP_1toque\LEEME</code></td></tr>
+<tr><td><strong>PSP</strong>: un juego no aparece en Adrenaline</td><td>Debe estar en <code>ux0:/pspemu/ISO/</code> (el launcher lo pone ahí solo). Refresca con O → volver a entrar</td></tr>
+<tr><td><strong>Flycast</strong>: "kubridge.skprx is outdated"</td><td>Pasa otra vez el instalador (pone la versión correcta) y <strong>reinicia</strong> la consola</td></tr>
+<tr><td><strong>PSVitaAlive</strong> no carga el catálogo</td><td>Instala <strong>iTLS-Enso.vpk</strong> (kit) y reinicia</td></tr>
+<tr><td>Los <strong>shaders</strong> no se notan</td><td>El pack pone el driver <code>gl</code> solo (v3.0): tras instalar, abre RetroXam una vez (aplica el ajuste) y reinicia RetroArch. Necesita PIBConfig + ShaRKBR33D hechos (una vez).</td></tr>
+<tr><td>Quiero otro tema o textos más grandes</td><td><strong>SELECT → Ajustes</strong> → Tema / Texto (se guarda solo)</td></tr>
+<tr><td>Quiero borrar juegos para hacer sitio</td><td>Mantén <strong>Triángulo</strong> sobre el juego y confirma con <strong>X</strong></td></tr>
+<tr><td>Error <strong>0x8010113D</strong> al instalar la VPK</td><td>Usa las VPKs actualizadas del kit (iconos 128×128 8-bit ya corregidos)</td></tr>
+<tr><td>El launcher no ve la SD</td><td>Repasa la Parte 1 (YAMT + ux0 → SD2Vita + reinicio)</td></tr>
+<tr><td><strong>Daedalus</strong> da error <strong>C2-12828-1</strong></td><td>Falta <code>libshacccg.suprx</code>: ejecuta <strong>ShaRKBR33D</strong> (kit), reinicia y comprueba <code>ur0:/data/libshacccg.suprx</code>. Comprueba también <code>ux0:/data/DaedalusX64/</code></td></tr>
+<tr><td>RetroArch no muestra <strong>Shaders</strong> en el menú</td><td>Necesitas la build <strong>piglet</strong> (viene en el kit; la "normal" no lo trae). Requisito: PIBConfig + ShaRKBR33D</td></tr>
+<tr><td>Un juego sale <strong>sin marco</strong> (bezel)</td><td>El launcher lo configura solo; si no: abre RetroXam una vez (auto-config) o extrae <code>Config_RetroXam_Piglet.zip</code> en <code>ux0:/data/retroarch/</code></td></tr>
+</table>
+<hr>
+</section>
+<section id="s19"><h2>🖼️ EXTRA 2 — Bezels estilo RetroXam (referencia)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<p>Los marcos con el logo de cada consola y la seta 🍄 <strong>se instalan solos con la v2.4</strong>. Referencia:</p>
+<ul><li><strong>Archivo</strong>: <code>Config_RetroXam_Piglet.zip</code> (o <code>Bezels_RetroXam_Vita.zip</code> solo-marcos) → <strong>X → Extract</strong> en <code>ux0:/data/retroarch/</code>.</li><li>Cobertura: NES, SNES, GB/GBC, GBA, Mega Drive/Mega CD, 32X, PSX, NeoGeo/Arcade y CPS-1/2. N64 (Daedalus) y OpenBOR no pasan por RetroArch: sin marco.</li><li>¿A mano? Con un juego abierto: RetroArch → Ajustes → Pantalla en pantalla → Overlay Preset → <code>retroxam/&lt;sistema&gt;.cfg</code> → Quick Menu → Overrides → <strong>Save Core Override</strong>.</li><li>Vita 1000 (OLED): el arte es oscuro y estático; con brillo alto horas y horas podría quedar marca (mismo aviso que otros packs).</li></ul>
+<hr>
+</section>
+<section id="s20"><h2>🌈 EXTRA 3 — Shaders (scanlines CRT / LCD) — referencia<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
+<ul><li><strong>La build piglet</strong> (kit) + <code>PIBConfig</code> + <code>ShaRKBR33D</code> = menú <strong>Shaders</strong> activo dentro de RetroArch.</li><li><strong>El pack lo deja TODO listo</strong> (v3.0): el driver <code>gl</code>, la carpeta de shaders y los presets por core se configuran <strong>solos</strong> al instalar / abrir RetroXam.</li><li><strong>A mano</strong>: <strong>Quick Menu → Shaders → Load Shader Preset</strong> → <code>crt/crt-pi.glslp</code> (TV) o <code>lcd/lcd3x.glslp</code> (Game Boy). Los pesados (crt-geom) van lentos: quédate con <code>crt-pi</code>, <code>lcd3x</code> o <code>sharp-bilinear-simple</code>. Fija el que te guste con <strong>Save Core Override</strong>.</li><li><strong>La v2.4 ya deja elegidos los mejores por core</strong> (CRT para consolas de TV, LCD para GB/GBC, nitidez para GBA). No hay que tocar nada.</li></ul>
+<hr>
+<p><em>MANUAL - RetroXam Vita — launcher v3.0 · 18 sistemas · ~2.200 juegos · RetroArch (piglet) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive</em> <em>Listas: <code>github.com/servixam-max/RetroXamVita</code> · Carátulas: <code>github.com/servixam-max/RetroXamVitaCovers</code></em></p>
+</section>
+<a class='upbtn' href='#top' title='Volver arriba'>&uarr;</a>
+</body></html>

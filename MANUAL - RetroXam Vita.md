@@ -37,7 +37,7 @@ Con este manual tu PS Vita queda con:
 
 | Archivo | Qué es | Tamaño |
 |---|---|---|
-| `RetroXam.vpk` | El launcher (**v3.4**: 18 sistemas + PSP/Dreamcast, listas estilo Apple y auto-config) | 5 MB |
+| `RetroXam_v3.4.vpk` | El launcher (**v3.4**: 18 sistemas + PSP/Dreamcast, listas estilo Apple y auto-config) | 5 MB |
 | `RetroArch.vpk` | RetroArch build **estándar** (la recomendada: encuadre de fábrica) | ~690 MB |
 | `RetroArch_piglet.vpk` | Alternativa **con shaders** (opcional; ver EXTRA 3) | ~473 MB |
 | `PIBConfig.vpk` | Solo con la build piglet (se abre **una vez**) | 2 MB |
@@ -142,7 +142,7 @@ En **VitaShell**, ve a `ux0:/` y pulsa **X sobre cada .vpk** → confirma. **En 
 
 > 💡 **Flujo 2 PASOS**: instala las VPKs **entre el PASO 1 y el PASO 2** (así el PASO 2 lo configura todo con RetroArch ya instalado).
 
-1. `RetroXam.vpk` — el launcher (v2.4)
+1. `RetroXam_v3.4.vpk` — el launcher (v2.4)
 2. `PIBConfig.vpk` — **ábrelo y pulsa X** (1 segundo; instala las librerías). Cierra.
 3. `RetroArch.vpk` — la build **estándar** (sustituye a la que tuvieras; tus juegos y ajustes se quedan). *(¿Shaders CRT? Build alternativa en la carpeta 4 - Extras del pack.)*
 4. `ShaRKBR33D.vpk` — **ábrelo una vez** (instala `libshacccg.suprx`, lo exigen Daedalus y los shaders). Tarda un minuto.

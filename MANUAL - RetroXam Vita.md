@@ -1,7 +1,7 @@
-# 🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v3.1)
+# 🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v3.2)
 
 Con este manual tu PS Vita queda con:
-- **El launcher RetroXam v3.1**: buscas el juego, pulsas X, se descarga y se abre solo. Con **carátulas**, iconos, temas y **AUTO-CONFIG** (bezels + shaders se instalan solos).
+- **El launcher RetroXam v3.2**: buscas el juego, pulsas X, se descarga y se abre solo. Con **carátulas**, iconos, temas y **AUTO-CONFIG** (bezels + shaders se instalan solos).
 - **RetroArch** (132 cores) → NES, SNES, GB/GBC/GBA, Mega Drive, Mega CD, 32X, PSX, Neo Geo, CPS-1/2/3 y FBNeo — y **SHADERS** con la build Piglet.
 - **DaedalusX64** → Nintendo 64 · **OpenBOR** → beats 'em up · **PSVitaAlive** → tienda de homebrew.
 - **PSP** (vía **Adrenaline**, ¡NATIVO, no emulado!) y **Dreamcast** (vía **Flycast**, juegos compatibles).
@@ -124,7 +124,7 @@ Con este manual tu PS Vita queda con:
 | `ux0:/data/retroxam/` | El ZIP completo de carátulas |
 | `ux0:/tai/` | **kubridge + fd_fix** (Flycast) + añade las 2 líneas al `config.txt` (con copia de seguridad `.retroxam.bak`) |
 | `ux0:/PSP_1toque/` | El extra del PSP "1 toque" |
-| `ux0:/data/retroarch/retroarch.cfg` | **Se ajusta solo** (v3.1): driver `gl` para shaders, carpetas y combo del menú — con copia `.retroxam.bak` |
+| `ux0:/data/retroarch/retroarch.cfg` | **Se ajusta solo** (v3.2): driver `gl` para shaders, carpetas y combo del menú — con copia `.retroxam.bak` |
 
 > 🔁 **Al terminar el PASO 2: REINICIA la consola UNA vez** (así se activan kubridge + fd_fix y los ajustes de RetroArch).
 
@@ -161,7 +161,7 @@ En **VitaShell**, ve a `ux0:/` y pulsa **X sobre cada .vpk** → confirma. **En 
 
 ## 🎨 PARTE 4 — Bezels y shaders (AUTO — cortesía de la v2.4)
 
-> ⚠️ **v3.1: los bezels vienen DESACTIVADOS de serie** (dejaremos de usarlos por defecto). Los shaders sí siguen activos. ¿Quieres los marcos de vuelta? Pídemelo — o cambia `input_overlay_enable` a `true` en `config/<Core>/<Core>.cfg`.
+> ⚠️ **v3.2: los bezels vienen DESACTIVADOS de serie** (dejaremos de usarlos por defecto). Los shaders sí siguen activos. ¿Quieres los marcos de vuelta? Pídemelo — o cambia `input_overlay_enable` a `true` en `config/<Core>/<Core>.cfg`.
 
 **No tienes que hacer nada**: el instalador ya copia la config, y ADEMÁS al abrir RetroXam por primera vez (con WiFi) el launcher **se auto-configura**: verás *"Instalando config RetroXam (bezels + shaders)..."* — una única vez.
 
@@ -192,7 +192,7 @@ Copia en **`ux0:/data/retroarch/system/`** (créala si no existe). **Con el inst
 
 1. Abre **RetroXam** desde la pantalla de inicio.
 
-> ✨ **Novedad v3.1**: interfaz minimalista en blanco, negro y gris (estilo Apple) — selección por contraste y el color solo en los iconos. Además, los bezels vienen **desactivados** de serie.
+> ✨ **Novedad v3.2**: interfaz minimalista en blanco, negro y gris (estilo Apple) — selección con **píldora blanca** (sin fondos grises) y el color solo en los iconos. Los bezels van **desactivados** y la config se aplica sola al abrir la app.
 2. **Activa el WiFi**: la primera vez que entres a cada sistema baja su lista desde GitHub (luego queda guardada). Si te falta alguna lista, **SELECT → Actualizar listas**.
 3. Controles:
 
@@ -250,7 +250,7 @@ La Vita lleva el chip de PSP dentro: Adrenaline lo usa directamente. Compatibili
 
 - **Los puentes de tu casa** (`192.168.2.…`) solo existen en tu red local: fuera **no se ven, y es normal**.
 - Fuera quedan dos vías: el **acceso público del Mac** (`https://servi.tail31979d.ts.net:10000`, ya viene dentro de la app) — necesita el **Mac encendido** — y **archive.org directo** (solo si ese WiFi no lo bloquea; muchos proveedores españoles lo capan los findes de partido).
-- **v3.1**: al empezar una descarga, el launcher **prueba los espejos y salta los que no responden** (la primera descarga tarda unos segundos más; después va directo a lo que funciona).
+- **v3.2**: al empezar una descarga, el launcher **prueba los espejos y salta los que no responden** (la primera descarga tarda unos segundos más; después va directo a lo que funciona).
 - **Para compartir**: el acceso público va dentro del pack → **otra Vita solo tiene que instalar y jugar**. (También puede poner su propio puente en **Ajustes → Puente**.)
 - Truco: desde el móvil abre `https://servi.tail31979d.ts.net:10000/ping` → si responde, la puerta pública está abierta.
 
@@ -356,8 +356,9 @@ python descargar_vita.py --repo https://github.com/servixam-max/RetroXamVita --o
 | **PSP**: un juego no aparece en Adrenaline | Debe estar en `ux0:/pspemu/ISO/` (el launcher lo pone ahí solo). Refresca con O → volver a entrar |
 | **Flycast**: "kubridge.skprx is outdated" | Pasa otra vez el instalador (pone la versión correcta) y **reinicia** la consola |
 | **PSVitaAlive** no carga el catálogo | Instala **iTLS-Enso.vpk** (kit) y reinicia |
-| Los **shaders** no se notan | El pack pone el driver `gl` solo (v3.1): tras instalar, abre RetroXam una vez (aplica el ajuste) y reinicia RetroArch. Necesita PIBConfig + ShaRKBR33D hechos (una vez). |
-| ¿Quieres los **bezels (marcos)** de vuelta? | En la v3.1 vienen desactivados de serie. Pídemelo, o cambia `input_overlay_enable` a `true` en los `config/<Core>/<Core>.cfg` y reinicia RetroArch |
+| Los **shaders** no se notan | El pack pone el driver `gl` solo (v3.2): tras instalar, abre RetroXam una vez (aplica el ajuste) y reinicia RetroArch. Necesita PIBConfig + ShaRKBR33D hechos (una vez). |
+| ¿Quieres los **bezels (marcos)** de vuelta? | En la v3.2 vienen desactivados de serie. Pídemelo, o cambia `input_overlay_enable` a `true` en los `config/<Core>/<Core>.cfg` y reinicia RetroArch |
+| **Sigo viendo los bezels** tras actualizar | Abre RetroXam una vez (instala la config sola) o pasa el PASO 2; después cierra y reabre RetroArch |
 | Quiero otro tema o textos más grandes | **SELECT → Ajustes** → Tema / Texto (se guarda solo) |
 | Quiero borrar juegos para hacer sitio | Mantén **Triángulo** sobre el juego y confirma con **X** |
 | Error **0x8010113D** al instalar la VPK | Usa las VPKs actualizadas del kit (iconos 128×128 8-bit ya corregidos) |
@@ -382,11 +383,11 @@ Los marcos con el logo de cada consola y la seta 🍄 **se instalan solos con la
 ## 🌈 EXTRA 3 — Shaders (scanlines CRT / LCD) — referencia
 
 - **La build piglet** (kit) + `PIBConfig` + `ShaRKBR33D` = menú **Shaders** activo dentro de RetroArch.
-- **El pack lo deja TODO listo** (v3.1): el driver `gl`, la carpeta de shaders y los presets por core se configuran **solos** al instalar / abrir RetroXam.
+- **El pack lo deja TODO listo** (v3.2): el driver `gl`, la carpeta de shaders y los presets por core se configuran **solos** al instalar / abrir RetroXam.
 - **A mano**: **Quick Menu → Shaders → Load Shader Preset** → `crt/crt-pi.glslp` (TV) o `lcd/lcd3x.glslp` (Game Boy). Los pesados (crt-geom) van lentos: quédate con `crt-pi`, `lcd3x` o `sharp-bilinear-simple`. Fija el que te guste con **Save Core Override**.
 - **La v2.4 ya deja elegidos los mejores por core** (CRT para consolas de TV, LCD para GB/GBC, nitidez para GBA). No hay que tocar nada.
 
 ---
 
-*MANUAL - RetroXam Vita — launcher v3.1 · 18 sistemas · ~2.200 juegos · RetroArch (piglet) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive*
+*MANUAL - RetroXam Vita — launcher v3.2 · 18 sistemas · ~2.200 juegos · RetroArch (piglet) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive*
 *Listas: `github.com/servixam-max/RetroXamVita` · Carátulas: `github.com/servixam-max/RetroXamVitaCovers`*

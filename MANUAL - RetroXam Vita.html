@@ -38,7 +38,7 @@ a{color:var(--ac)}
 .upbtn{position:fixed;right:18px;bottom:18px;background:var(--ac);color:#fff;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.35em;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 .upbtn:hover{background:var(--ac2)}
 </style></head><body id='top'>
-<div class="banner"><h1>🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v3.1)</h1><div class="sub">Guia completa paso a paso &middot; RetroXam para PS Vita</div></div>
+<div class="banner"><h1>🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v3.2)</h1><div class="sub">Guia completa paso a paso &middot; RetroXam para PS Vita</div></div>
 <nav class="toc" id="indice"><h2>&#128209; &Iacute;ndice (haz clic para saltar)</h2><ol><li><a href="#s1">⚡ QUÉ HAY QUE HACER — el resumen</a></li>
 <li><a href="#s2">📦 Lo que necesitas</a></li>
 <li><a href="#s3">🛠️ PARTE 0 — Liberar la Vita (solo si no lo está)</a></li>
@@ -60,7 +60,7 @@ a{color:var(--ac)}
 <li><a href="#s19">🖼️ EXTRA 2 — Bezels estilo RetroXam (referencia)</a></li>
 <li><a href="#s20">🌈 EXTRA 3 — Shaders (scanlines CRT / LCD) — referencia</a></li></ol></nav>
 <p>Con este manual tu PS Vita queda con:</p>
-<ul><li><strong>El launcher RetroXam v3.1</strong>: buscas el juego, pulsas X, se descarga y se abre solo. Con <strong>carátulas</strong>, iconos, temas y <strong>AUTO-CONFIG</strong> (bezels + shaders se instalan solos).</li><li><strong>RetroArch</strong> (132 cores) → NES, SNES, GB/GBC/GBA, Mega Drive, Mega CD, 32X, PSX, Neo Geo, CPS-1/2/3 y FBNeo — y <strong>SHADERS</strong> con la build Piglet.</li><li><strong>DaedalusX64</strong> → Nintendo 64 · <strong>OpenBOR</strong> → beats 'em up · <strong>PSVitaAlive</strong> → tienda de homebrew.</li><li><strong>PSP</strong> (vía <strong>Adrenaline</strong>, ¡NATIVO, no emulado!) y <strong>Dreamcast</strong> (vía <strong>Flycast</strong>, juegos compatibles).</li><li><strong>~2.200 juegos</strong> seleccionados (<strong>18 sistemas</strong>), con <strong>prioridad a versiones en español</strong>.</li></ul>
+<ul><li><strong>El launcher RetroXam v3.2</strong>: buscas el juego, pulsas X, se descarga y se abre solo. Con <strong>carátulas</strong>, iconos, temas y <strong>AUTO-CONFIG</strong> (bezels + shaders se instalan solos).</li><li><strong>RetroArch</strong> (132 cores) → NES, SNES, GB/GBC/GBA, Mega Drive, Mega CD, 32X, PSX, Neo Geo, CPS-1/2/3 y FBNeo — y <strong>SHADERS</strong> con la build Piglet.</li><li><strong>DaedalusX64</strong> → Nintendo 64 · <strong>OpenBOR</strong> → beats 'em up · <strong>PSVitaAlive</strong> → tienda de homebrew.</li><li><strong>PSP</strong> (vía <strong>Adrenaline</strong>, ¡NATIVO, no emulado!) y <strong>Dreamcast</strong> (vía <strong>Flycast</strong>, juegos compatibles).</li><li><strong>~2.200 juegos</strong> seleccionados (<strong>18 sistemas</strong>), con <strong>prioridad a versiones en español</strong>.</li></ul>
 <blockquote>📖 <strong>Este manual también existe en HTML con índice</strong> (haz clic para saltar de sección): <code>MANUAL - RetroXam Vita.html</code>.</blockquote>
 <hr>
 <section id="s1"><h2>⚡ QUÉ HAY QUE HACER — el resumen<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
@@ -136,7 +136,7 @@ a{color:var(--ac)}
 <tr><td><code>ux0:/data/retroxam/</code></td><td>El ZIP completo de carátulas</td></tr>
 <tr><td><code>ux0:/tai/</code></td><td><strong>kubridge + fd_fix</strong> (Flycast) + añade las 2 líneas al <code>config.txt</code> (con copia de seguridad <code>.retroxam.bak</code>)</td></tr>
 <tr><td><code>ux0:/PSP_1toque/</code></td><td>El extra del PSP "1 toque"</td></tr>
-<tr><td><code>ux0:/data/retroarch/retroarch.cfg</code></td><td><strong>Se ajusta solo</strong> (v3.1): driver <code>gl</code> para shaders, carpetas y combo del menú — con copia <code>.retroxam.bak</code></td></tr>
+<tr><td><code>ux0:/data/retroarch/retroarch.cfg</code></td><td><strong>Se ajusta solo</strong> (v3.2): driver <code>gl</code> para shaders, carpetas y combo del menú — con copia <code>.retroxam.bak</code></td></tr>
 </table>
 <blockquote>🔁 <strong>Al terminar el PASO 2: REINICIA la consola UNA vez</strong> (así se activan kubridge + fd_fix y los ajustes de RetroArch).</blockquote>
 <h3>✍️ A mano (sin instalador)</h3>
@@ -153,7 +153,7 @@ a{color:var(--ac)}
 <hr>
 </section>
 <section id="s7"><h2>🎨 PARTE 4 — Bezels y shaders (AUTO — cortesía de la v2.4)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
-<blockquote>⚠️ <strong>v3.1: los bezels vienen DESACTIVADOS de serie</strong> (dejaremos de usarlos por defecto). Los shaders sí siguen activos. ¿Quieres los marcos de vuelta? Pídemelo — o cambia <code>input_overlay_enable</code> a <code>true</code> en <code>config/&lt;Core&gt;/&lt;Core&gt;.cfg</code>.</blockquote>
+<blockquote>⚠️ <strong>v3.2: los bezels vienen DESACTIVADOS de serie</strong> (dejaremos de usarlos por defecto). Los shaders sí siguen activos. ¿Quieres los marcos de vuelta? Pídemelo — o cambia <code>input_overlay_enable</code> a <code>true</code> en <code>config/&lt;Core&gt;/&lt;Core&gt;.cfg</code>.</blockquote>
 <p><strong>No tienes que hacer nada</strong>: el instalador ya copia la config, y ADEMÁS al abrir RetroXam por primera vez (con WiFi) el launcher <strong>se auto-configura</strong>: verás <em>"Instalando config RetroXam (bezels + shaders)..."</em> — una única vez.</p>
 <ul><li>✅ <strong>Bezels</strong>: marcos con el logo de cada consola y la seta 1-UP 🍄 en NES, SNES, GB/GBC, GBA, Mega Drive/CD, 32X, PSX, NeoGeo/Arcade y CPS-1/2 (el juego va dentro de su ventana exacta).</li><li>✅ <strong>Shaders</strong>: CRT para las de TV (crt-pi), LCD para Game Boy (lcd3x) y nitidez para GBA (sharp-bilinear). Se activan por core solos.</li><li><strong>Respaldo manual</strong> (solo si algo fallara): extraer <code>Config_RetroXam_Piglet.zip</code> en <code>ux0:/data/retroarch/</code> con VitaShell.</li><li><strong>Cambiar shader a mano</strong>: con un juego abierto → <strong>Quick Menu → Shaders</strong> (solo existe en la build piglet ✓) → elige otro → guarda con <strong>Save Core Override</strong>.</li><li>¿Imagen <strong>desplazada</strong> alguna vez (raro, le pasa a algún core)? <strong>1º cierra y reabre el juego</strong> (suele recentrarse solo). Si sigue: con el juego abierto <strong>L + R + START + SELECT</strong> = menú → <strong>Ajustes → Vídeo → Escalado</strong> → "Relación de aspecto: <strong>Personalizada</strong>" + viewport de su sistema (4:3 = 120/2/720/540 · GB/GBC = 240/56/480/432 · GBA = 156/56/648/432) → Quick Menu → Overrides → <strong>Save Core Override</strong>.</li></ul>
 <hr>
@@ -172,7 +172,7 @@ a{color:var(--ac)}
 </section>
 <section id="s9"><h2>🚀 PARTE 6 — El launcher RetroXam (tu centro de juegos)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
 <ol><li>Abre <strong>RetroXam</strong> desde la pantalla de inicio.</li></ol>
-<blockquote>✨ <strong>Novedad v3.1</strong>: interfaz minimalista en blanco, negro y gris (estilo Apple) — selección por contraste y el color solo en los iconos. Además, los bezels vienen <strong>desactivados</strong> de serie.</blockquote>
+<blockquote>✨ <strong>Novedad v3.2</strong>: interfaz minimalista en blanco, negro y gris (estilo Apple) — selección con <strong>píldora blanca</strong> (sin fondos grises) y el color solo en los iconos. Los bezels van <strong>desactivados</strong> y la config se aplica sola al abrir la app.</blockquote>
 <ol><li><strong>Activa el WiFi</strong>: la primera vez que entres a cada sistema baja su lista desde GitHub (luego queda guardada). Si te falta alguna lista, <strong>SELECT → Actualizar listas</strong>.</li><li>Controles:</li></ol>
 <table>
 <tr><th>Botón</th><th>Acción</th></tr>
@@ -204,7 +204,7 @@ a{color:var(--ac)}
 <hr>
 </section>
 <section id="s12"><h2>🛰️ Usar RetroXam FUERA de casa (y compartirlo)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
-<ul><li><strong>Los puentes de tu casa</strong> (<code>192.168.2.…</code>) solo existen en tu red local: fuera <strong>no se ven, y es normal</strong>.</li><li>Fuera quedan dos vías: el <strong>acceso público del Mac</strong> (<code>https://servi.tail31979d.ts.net:10000</code>, ya viene dentro de la app) — necesita el <strong>Mac encendido</strong> — y <strong>archive.org directo</strong> (solo si ese WiFi no lo bloquea; muchos proveedores españoles lo capan los findes de partido).</li><li><strong>v3.1</strong>: al empezar una descarga, el launcher <strong>prueba los espejos y salta los que no responden</strong> (la primera descarga tarda unos segundos más; después va directo a lo que funciona).</li><li><strong>Para compartir</strong>: el acceso público va dentro del pack → <strong>otra Vita solo tiene que instalar y jugar</strong>. (También puede poner su propio puente en <strong>Ajustes → Puente</strong>.)</li><li>Truco: desde el móvil abre <code>https://servi.tail31979d.ts.net:10000/ping</code> → si responde, la puerta pública está abierta.</li></ul>
+<ul><li><strong>Los puentes de tu casa</strong> (<code>192.168.2.…</code>) solo existen en tu red local: fuera <strong>no se ven, y es normal</strong>.</li><li>Fuera quedan dos vías: el <strong>acceso público del Mac</strong> (<code>https://servi.tail31979d.ts.net:10000</code>, ya viene dentro de la app) — necesita el <strong>Mac encendido</strong> — y <strong>archive.org directo</strong> (solo si ese WiFi no lo bloquea; muchos proveedores españoles lo capan los findes de partido).</li><li><strong>v3.2</strong>: al empezar una descarga, el launcher <strong>prueba los espejos y salta los que no responden</strong> (la primera descarga tarda unos segundos más; después va directo a lo que funciona).</li><li><strong>Para compartir</strong>: el acceso público va dentro del pack → <strong>otra Vita solo tiene que instalar y jugar</strong>. (También puede poner su propio puente en <strong>Ajustes → Puente</strong>.)</li><li>Truco: desde el móvil abre <code>https://servi.tail31979d.ts.net:10000/ping</code> → si responde, la puerta pública está abierta.</li></ul>
 <hr>
 </section>
 <section id="s13"><h2>🔌 El PUENTE por PC (para redes que bloquean archive.org)<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
@@ -281,8 +281,9 @@ python descargar_vita.py --repo https://github.com/servixam-max/RetroXamVita --o
 <tr><td><strong>PSP</strong>: un juego no aparece en Adrenaline</td><td>Debe estar en <code>ux0:/pspemu/ISO/</code> (el launcher lo pone ahí solo). Refresca con O → volver a entrar</td></tr>
 <tr><td><strong>Flycast</strong>: "kubridge.skprx is outdated"</td><td>Pasa otra vez el instalador (pone la versión correcta) y <strong>reinicia</strong> la consola</td></tr>
 <tr><td><strong>PSVitaAlive</strong> no carga el catálogo</td><td>Instala <strong>iTLS-Enso.vpk</strong> (kit) y reinicia</td></tr>
-<tr><td>Los <strong>shaders</strong> no se notan</td><td>El pack pone el driver <code>gl</code> solo (v3.1): tras instalar, abre RetroXam una vez (aplica el ajuste) y reinicia RetroArch. Necesita PIBConfig + ShaRKBR33D hechos (una vez).</td></tr>
-<tr><td>¿Quieres los <strong>bezels (marcos)</strong> de vuelta?</td><td>En la v3.1 vienen desactivados de serie. Pídemelo, o cambia <code>input_overlay_enable</code> a <code>true</code> en los <code>config/&lt;Core&gt;/&lt;Core&gt;.cfg</code> y reinicia RetroArch</td></tr>
+<tr><td>Los <strong>shaders</strong> no se notan</td><td>El pack pone el driver <code>gl</code> solo (v3.2): tras instalar, abre RetroXam una vez (aplica el ajuste) y reinicia RetroArch. Necesita PIBConfig + ShaRKBR33D hechos (una vez).</td></tr>
+<tr><td>¿Quieres los <strong>bezels (marcos)</strong> de vuelta?</td><td>En la v3.2 vienen desactivados de serie. Pídemelo, o cambia <code>input_overlay_enable</code> a <code>true</code> en los <code>config/&lt;Core&gt;/&lt;Core&gt;.cfg</code> y reinicia RetroArch</td></tr>
+<tr><td><strong>Sigo viendo los bezels</strong> tras actualizar</td><td>Abre RetroXam una vez (instala la config sola) o pasa el PASO 2; después cierra y reabre RetroArch</td></tr>
 <tr><td>Quiero otro tema o textos más grandes</td><td><strong>SELECT → Ajustes</strong> → Tema / Texto (se guarda solo)</td></tr>
 <tr><td>Quiero borrar juegos para hacer sitio</td><td>Mantén <strong>Triángulo</strong> sobre el juego y confirma con <strong>X</strong></td></tr>
 <tr><td>Error <strong>0x8010113D</strong> al instalar la VPK</td><td>Usa las VPKs actualizadas del kit (iconos 128×128 8-bit ya corregidos)</td></tr>
@@ -299,9 +300,9 @@ python descargar_vita.py --repo https://github.com/servixam-max/RetroXamVita --o
 <hr>
 </section>
 <section id="s20"><h2>🌈 EXTRA 3 — Shaders (scanlines CRT / LCD) — referencia<a class="up" href="#indice">&uarr; &iacute;ndice</a></h2>
-<ul><li><strong>La build piglet</strong> (kit) + <code>PIBConfig</code> + <code>ShaRKBR33D</code> = menú <strong>Shaders</strong> activo dentro de RetroArch.</li><li><strong>El pack lo deja TODO listo</strong> (v3.1): el driver <code>gl</code>, la carpeta de shaders y los presets por core se configuran <strong>solos</strong> al instalar / abrir RetroXam.</li><li><strong>A mano</strong>: <strong>Quick Menu → Shaders → Load Shader Preset</strong> → <code>crt/crt-pi.glslp</code> (TV) o <code>lcd/lcd3x.glslp</code> (Game Boy). Los pesados (crt-geom) van lentos: quédate con <code>crt-pi</code>, <code>lcd3x</code> o <code>sharp-bilinear-simple</code>. Fija el que te guste con <strong>Save Core Override</strong>.</li><li><strong>La v2.4 ya deja elegidos los mejores por core</strong> (CRT para consolas de TV, LCD para GB/GBC, nitidez para GBA). No hay que tocar nada.</li></ul>
+<ul><li><strong>La build piglet</strong> (kit) + <code>PIBConfig</code> + <code>ShaRKBR33D</code> = menú <strong>Shaders</strong> activo dentro de RetroArch.</li><li><strong>El pack lo deja TODO listo</strong> (v3.2): el driver <code>gl</code>, la carpeta de shaders y los presets por core se configuran <strong>solos</strong> al instalar / abrir RetroXam.</li><li><strong>A mano</strong>: <strong>Quick Menu → Shaders → Load Shader Preset</strong> → <code>crt/crt-pi.glslp</code> (TV) o <code>lcd/lcd3x.glslp</code> (Game Boy). Los pesados (crt-geom) van lentos: quédate con <code>crt-pi</code>, <code>lcd3x</code> o <code>sharp-bilinear-simple</code>. Fija el que te guste con <strong>Save Core Override</strong>.</li><li><strong>La v2.4 ya deja elegidos los mejores por core</strong> (CRT para consolas de TV, LCD para GB/GBC, nitidez para GBA). No hay que tocar nada.</li></ul>
 <hr>
-<p><em>MANUAL - RetroXam Vita — launcher v3.1 · 18 sistemas · ~2.200 juegos · RetroArch (piglet) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive</em> <em>Listas: <code>github.com/servixam-max/RetroXamVita</code> · Carátulas: <code>github.com/servixam-max/RetroXamVitaCovers</code></em></p>
+<p><em>MANUAL - RetroXam Vita — launcher v3.2 · 18 sistemas · ~2.200 juegos · RetroArch (piglet) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive</em> <em>Listas: <code>github.com/servixam-max/RetroXamVita</code> · Carátulas: <code>github.com/servixam-max/RetroXamVitaCovers</code></em></p>
 </section>
 <a class='upbtn' href='#top' title='Volver arriba'>&uarr;</a>
 </body></html>

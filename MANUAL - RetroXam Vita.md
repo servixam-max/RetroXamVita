@@ -1,8 +1,8 @@
-# 🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v3.2)
+# 🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v3.3)
 
 Con este manual tu PS Vita queda con:
-- **El launcher RetroXam v3.2**: buscas el juego, pulsas X, se descarga y se abre solo. Con **carátulas**, iconos, temas y **AUTO-CONFIG** (bezels + shaders se instalan solos).
-- **RetroArch** (132 cores) → NES, SNES, GB/GBC/GBA, Mega Drive, Mega CD, 32X, PSX, Neo Geo, CPS-1/2/3 y FBNeo — y **SHADERS** con la build Piglet.
+- **El launcher RetroXam v3.3**: buscas el juego, pulsas X, se descarga y se abre solo. Con **carátulas**, iconos, temas y **AUTO-CONFIG** (bezels + shaders se instalan solos).
+- **RetroArch** (build estándar, 132 cores) → NES, SNES, GB/GBC/GBA, Mega Drive, Mega CD, 32X, PSX, Neo Geo, CPS-1/2/3 y FBNeo.
 - **DaedalusX64** → Nintendo 64 · **OpenBOR** → beats 'em up · **PSVitaAlive** → tienda de homebrew.
 - **PSP** (vía **Adrenaline**, ¡NATIVO, no emulado!) y **Dreamcast** (vía **Flycast**, juegos compatibles).
 - **~2.200 juegos** seleccionados (**18 sistemas**), con **prioridad a versiones en español**.
@@ -37,18 +37,18 @@ Con este manual tu PS Vita queda con:
 
 | Archivo | Qué es | Tamaño |
 |---|---|---|
-| `RetroXam.vpk` | El launcher (**v2.4**: + **PSP y Dreamcast**, auto-config de bezels/shaders, menú de 18 sistemas) | 5 MB |
-| `RetroArch_piglet.vpk` | RetroArch **CON shaders** (la recomendada) | ~473 MB |
-| `RetroArch.vpk` | RetroArch "normal" (alternativa; sin menú de shaders) | ~646 MB |
-| `PIBConfig.vpk` | Librerías que exige la build piglet (se abre **una vez**) | 2 MB |
+| `RetroXam.vpk` | El launcher (**v3.3**: 18 sistemas + PSP/Dreamcast, listas estilo Apple y auto-config) | 5 MB |
+| `RetroArch.vpk` | RetroArch build **estándar** (la recomendada: encuadre de fábrica) | ~690 MB |
+| `RetroArch_piglet.vpk` | Alternativa **con shaders** (opcional; ver EXTRA 3) | ~473 MB |
+| `PIBConfig.vpk` | Solo con la build piglet (se abre **una vez**) | 2 MB |
 | `DaedalusX64.vpk` + `DaedalusX64-data.zip` | Emulador + datos de Nintendo 64 | 3 MB + 75 MB |
 | `OpenBOR.vpk` | Motor Beats of Rage | 1 MB |
 | `Adrenaline.vpk` + `661.PBP` | **PSP nativo** (el firmware se baja solo; 661.PBP es el plan B) | 0,5 + 31 MB |
 | `Flycast.vpk` | Dreamcast (experimental — solo juegos compatibles) | 4,6 MB |
-| `ShaRKBR33D.vpk` | Librería `libshacccg.suprx` que exigen Daedalus y los shaders (se abre **una vez**) | 1,5 MB |
+| `ShaRKBR33D.vpk` | Librería `libshacccg.suprx` que exigen Daedalus y Flycast (se abre **una vez**) | 1,5 MB |
 | `Plugins\` | **kubridge + fd_fix** (¡imprescindibles para Flycast!) + AutoPlugin2 + iTLS-Enso — **el instalador los configura solo** | 15 MB |
 | `PSVitaAlive.vpk` | **Tienda de homebrew** para la Vita (catálogo abierto; se actualiza sola) — opcional | 8 MB |
-| `Config_RetroXam_Piglet.zip` | Bezels + shaders + ajustes por core (v1.1) como respaldo manual | 0,7 MB |
+| `Config_RetroXam_Piglet.zip` | Ajustes por core + config de RetroArch (respaldo manual) | 0,7 MB |
 | `RetroXamVita_Covers.zip` | Las 2.151 carátulas de todos los sistemas (opcional: se descargan solas) | 54 MB |
 | `PSP_1toque\` | **Extra opcional**: lanzar juegos PSP directos desde RetroXam (ABM + AdrenalineLauncher + LEEME) | 11 MB |
 | `INSTALAR VITA (USB - rapido).bat` | Instalador de PC en 1 paso por **USB** (la vía rápida) | — |
@@ -124,7 +124,7 @@ Con este manual tu PS Vita queda con:
 | `ux0:/data/retroxam/` | El ZIP completo de carátulas |
 | `ux0:/tai/` | **kubridge + fd_fix** (Flycast) + añade las 2 líneas al `config.txt` (con copia de seguridad `.retroxam.bak`) |
 | `ux0:/PSP_1toque/` | El extra del PSP "1 toque" |
-| `ux0:/data/retroarch/retroarch.cfg` | **Se ajusta solo** (v3.2): driver `gl` para shaders, carpetas y combo del menú — con copia `.retroxam.bak` |
+| `ux0:/data/retroarch/retroarch.cfg` | **Se ajusta solo** (v3.3): driver `gl` para shaders, carpetas y combo del menú — con copia `.retroxam.bak` |
 
 > 🔁 **Al terminar el PASO 2: REINICIA la consola UNA vez** (así se activan kubridge + fd_fix y los ajustes de RetroArch).
 
@@ -144,7 +144,7 @@ En **VitaShell**, ve a `ux0:/` y pulsa **X sobre cada .vpk** → confirma. **En 
 
 1. `RetroXam.vpk` — el launcher (v2.4)
 2. `PIBConfig.vpk` — **ábrelo y pulsa X** (1 segundo; instala las librerías). Cierra.
-3. `RetroArch_piglet.vpk` — la build con shaders (si ya tenías RetroArch, esta la **sustituye**; tus juegos y ajustes se quedan)
+3. `RetroArch.vpk` — la build **estándar** (sustituye a la que tuvieras; tus juegos y ajustes se quedan). *(¿Shaders CRT? Build alternativa en la carpeta 4 - Extras del pack.)*
 4. `ShaRKBR33D.vpk` — **ábrelo una vez** (instala `libshacccg.suprx`, lo exigen Daedalus y los shaders). Tarda un minuto.
 5. `DaedalusX64.vpk` — N64
 6. `OpenBOR.vpk` — beats 'em up
@@ -159,9 +159,9 @@ En **VitaShell**, ve a `ux0:/` y pulsa **X sobre cada .vpk** → confirma. **En 
 
 ---
 
-## 🎨 PARTE 4 — Bezels y shaders (AUTO — cortesía de la v2.4)
+## 🎨 PARTE 4 — RetroArch en tu Vita (encuadre, marcos y shaders)
 
-> ⚠️ **v3.2: los bezels vienen DESACTIVADOS de serie** (dejaremos de usarlos por defecto). Los shaders sí siguen activos. ¿Quieres los marcos de vuelta? Pídemelo — o cambia `input_overlay_enable` a `true` en `config/<Core>/<Core>.cfg`.
+> ℹ️ **v3.3 — RetroArch va de fábrica**: build **estándar**, sin marcos, sin shaders y sin ventanas personalizadas → imagen **centrada y estable** (esto arregla el desplazamiento). Marcos y shaders siguen disponibles como opción (EXTRA 2 y EXTRA 3).
 
 **No tienes que hacer nada**: el instalador ya copia la config, y ADEMÁS al abrir RetroXam por primera vez (con WiFi) el launcher **se auto-configura**: verás *"Instalando config RetroXam (bezels + shaders)..."* — una única vez.
 
@@ -192,7 +192,7 @@ Copia en **`ux0:/data/retroarch/system/`** (créala si no existe). **Con el inst
 
 1. Abre **RetroXam** desde la pantalla de inicio.
 
-> ✨ **Novedad v3.2**: interfaz minimalista en blanco, negro y gris (estilo Apple) — selección con **píldora blanca** (sin fondos grises) y el color solo en los iconos. Los bezels van **desactivados** y la config se aplica sola al abrir la app.
+> ✨ **Novedad v3.3**: listas con **barra blanca de selección** (sin fondos grises), **RetroArch build estándar** configurado de fábrica (adiós a la pantalla desplazada) y config que se aplica sola al abrir la app.
 2. **Activa el WiFi**: la primera vez que entres a cada sistema baja su lista desde GitHub (luego queda guardada). Si te falta alguna lista, **SELECT → Actualizar listas**.
 3. Controles:
 
@@ -250,7 +250,7 @@ La Vita lleva el chip de PSP dentro: Adrenaline lo usa directamente. Compatibili
 
 - **Los puentes de tu casa** (`192.168.2.…`) solo existen en tu red local: fuera **no se ven, y es normal**.
 - Fuera quedan dos vías: el **acceso público del Mac** (`https://servi.tail31979d.ts.net:10000`, ya viene dentro de la app) — necesita el **Mac encendido** — y **archive.org directo** (solo si ese WiFi no lo bloquea; muchos proveedores españoles lo capan los findes de partido).
-- **v3.2**: al empezar una descarga, el launcher **prueba los espejos y salta los que no responden** (la primera descarga tarda unos segundos más; después va directo a lo que funciona).
+- **v3.3**: al empezar una descarga, el launcher **prueba los espejos y salta los que no responden** (la primera descarga tarda unos segundos más; después va directo a lo que funciona).
 - **Para compartir**: el acceso público va dentro del pack → **otra Vita solo tiene que instalar y jugar**. (También puede poner su propio puente en **Ajustes → Puente**.)
 - Truco: desde el móvil abre `https://servi.tail31979d.ts.net:10000/ping` → si responde, la puerta pública está abierta.
 
@@ -356,20 +356,20 @@ python descargar_vita.py --repo https://github.com/servixam-max/RetroXamVita --o
 | **PSP**: un juego no aparece en Adrenaline | Debe estar en `ux0:/pspemu/ISO/` (el launcher lo pone ahí solo). Refresca con O → volver a entrar |
 | **Flycast**: "kubridge.skprx is outdated" | Pasa otra vez el instalador (pone la versión correcta) y **reinicia** la consola |
 | **PSVitaAlive** no carga el catálogo | Instala **iTLS-Enso.vpk** (kit) y reinicia |
-| Los **shaders** no se notan | El pack pone el driver `gl` solo (v3.2): tras instalar, abre RetroXam una vez (aplica el ajuste) y reinicia RetroArch. Necesita PIBConfig + ShaRKBR33D hechos (una vez). |
-| ¿Quieres los **bezels (marcos)** de vuelta? | En la v3.2 vienen desactivados de serie. Pídemelo, o cambia `input_overlay_enable` a `true` en los `config/<Core>/<Core>.cfg` y reinicia RetroArch |
+| Los **shaders** no se notan | El pack pone el driver `gl` solo (v3.3): tras instalar, abre RetroXam una vez (aplica el ajuste) y reinicia RetroArch. Necesita PIBConfig + ShaRKBR33D hechos (una vez). |
+| ¿Quieres los **bezels (marcos)** de vuelta? | En la v3.3 vienen desactivados de serie. Pídemelo, o cambia `input_overlay_enable` a `true` en los `config/<Core>/<Core>.cfg` y reinicia RetroArch |
 | **Sigo viendo los bezels** tras actualizar | Abre RetroXam una vez (instala la config sola) o pasa el PASO 2; después cierra y reabre RetroArch |
 | Quiero otro tema o textos más grandes | **SELECT → Ajustes** → Tema / Texto (se guarda solo) |
 | Quiero borrar juegos para hacer sitio | Mantén **Triángulo** sobre el juego y confirma con **X** |
 | Error **0x8010113D** al instalar la VPK | Usa las VPKs actualizadas del kit (iconos 128×128 8-bit ya corregidos) |
 | El launcher no ve la SD | Repasa la Parte 1 (YAMT + ux0 → SD2Vita + reinicio) |
 | **Daedalus** da error **C2-12828-1** | Falta `libshacccg.suprx`: ejecuta **ShaRKBR33D** (kit), reinicia y comprueba `ur0:/data/libshacccg.suprx`. Comprueba también `ux0:/data/DaedalusX64/` |
-| RetroArch no muestra **Shaders** en el menú | Necesitas la build **piglet** (viene en el kit; la "normal" no lo trae). Requisito: PIBConfig + ShaRKBR33D |
-| Un juego sale **sin marco** (bezel) | El launcher lo configura solo; si no: abre RetroXam una vez (auto-config) o extrae `Config_RetroXam_Piglet.zip` en `ux0:/data/retroarch/` |
+| RetroArch no muestra **Shaders** en el menú | Es normal: la build estándar no los trae. La build **piglet** (carpeta 4 - Extras) sí — con PIBConfig + ShaRKBR33D |
+| Un juego sale **sin marco** (bezel) | Es lo normal desde la v3.3 (marcos desactivados de fábrica). ¿Los quieres de vuelta? Mira el EXTRA 2 |
 
 ---
 
-## 🖼️ EXTRA 2 — Bezels estilo RetroXam (referencia)
+## 🖼️ EXTRA 2 — Bezels estilo RetroXam (opcional — la v3.3 los desactiva de serie)
 
 Los marcos con el logo de cada consola y la seta 🍄 **se instalan solos con la v2.4**. Referencia:
 
@@ -382,12 +382,12 @@ Los marcos con el logo de cada consola y la seta 🍄 **se instalan solos con la
 
 ## 🌈 EXTRA 3 — Shaders (scanlines CRT / LCD) — referencia
 
-- **La build piglet** (kit) + `PIBConfig` + `ShaRKBR33D` = menú **Shaders** activo dentro de RetroArch.
-- **El pack lo deja TODO listo** (v3.2): el driver `gl`, la carpeta de shaders y los presets por core se configuran **solos** al instalar / abrir RetroXam.
+- **La build piglet** (carpeta 4 - Extras) + `PIBConfig` + `ShaRKBR33D` = menú **Shaders** activo dentro de RetroArch.
+- **El pack lo deja TODO listo** (v3.3): el driver `gl`, la carpeta de shaders y los presets por core se configuran **solos** al instalar / abrir RetroXam.
 - **A mano**: **Quick Menu → Shaders → Load Shader Preset** → `crt/crt-pi.glslp` (TV) o `lcd/lcd3x.glslp` (Game Boy). Los pesados (crt-geom) van lentos: quédate con `crt-pi`, `lcd3x` o `sharp-bilinear-simple`. Fija el que te guste con **Save Core Override**.
 - **La v2.4 ya deja elegidos los mejores por core** (CRT para consolas de TV, LCD para GB/GBC, nitidez para GBA). No hay que tocar nada.
 
 ---
 
-*MANUAL - RetroXam Vita — launcher v3.2 · 18 sistemas · ~2.200 juegos · RetroArch (piglet) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive*
+*MANUAL - RetroXam Vita — launcher v3.3 · 18 sistemas · ~2.200 juegos · RetroArch (estándar) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive*
 *Listas: `github.com/servixam-max/RetroXamVita` · Carátulas: `github.com/servixam-max/RetroXamVitaCovers`*

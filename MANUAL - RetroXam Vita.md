@@ -1,7 +1,7 @@
-# 🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v2.4)
+# 🎮 MANUAL COMPLETO — Deja tu PS Vita PERFECTA con RetroXam (v2.4.1)
 
 Con este manual tu PS Vita queda con:
-- **El launcher RetroXam v2.4**: buscas el juego, pulsas X, se descarga y se abre solo. Con **carátulas**, iconos, temas y **AUTO-CONFIG** (bezels + shaders se instalan solos).
+- **El launcher RetroXam v2.4.1**: buscas el juego, pulsas X, se descarga y se abre solo. Con **carátulas**, iconos, temas y **AUTO-CONFIG** (bezels + shaders se instalan solos).
 - **RetroArch** (132 cores) → NES, SNES, GB/GBC/GBA, Mega Drive, Mega CD, 32X, PSX, Neo Geo, CPS-1/2/3 y FBNeo — y **SHADERS** con la build Piglet.
 - **DaedalusX64** → Nintendo 64 · **OpenBOR** → beats 'em up · **PSVitaAlive** → tienda de homebrew.
 - **PSP** (vía **Adrenaline**, ¡NATIVO, no emulado!) y **Dreamcast** (vía **Flycast**, juegos compatibles).
@@ -94,12 +94,19 @@ Con este manual tu PS Vita queda con:
 
 > El instalador deja **cada cosa en su sitio, solo**. Elige la vía que prefieras:
 
-### 🅰 USB — la vía rápida (recomendada, con cable)
+### 🅰 USB — la vía rápida (recomendada, con cable) — ¡AHORA EN 2 PASOS! ⭐
 
-1. En la Vita: **VitaShell → START → pon SELECT = USB → cierra con O → pulsa SELECT** → conecta el cable USB. La Vita aparece en el PC como una **unidad** (puede ser `P:`, `F:`…).
-2. En el PC: doble clic a **`INSTALAR VITA (USB - rapido).bat`** → escribe la letra de la unidad (o **Enter = autodetectar**).
-3. Verás el progreso: *"Copiando a la Vita por USB…"*, el avance por bloques (`… 25/610 copiados`) y **por MB en los archivos grandes** (`… 120/473 MB`). Al final: **"=== TERMINADO ==="** (el "pulsa una tecla" es solo para cerrar la ventana).
-4. **Es seguro repetirlo**: lo que ya esté copiado se salta (`+0 copiados, N ya estaban`).
+**PASO 1 — las VPKs** (2 min):
+1. En la Vita: **VitaShell → START → pon SELECT = USB → cierra con O → pulsa SELECT** → conecta el cable USB. La Vita aparece como **unidad** (puede ser `P:`, `F:`…).
+2. En el PC: doble clic a **`PASO 1 - VPKs a la Vita (USB).bat`** → letra de la unidad (o **Enter = autodetectar**).
+3. Desconecta el USB e **instala las VPKs** en la Vita (Parte 3) + abre **PIBConfig** y **ShaRKBR33D** una vez cada una.
+
+**PASO 2 — todo lo demás + config automática** (5 min):
+4. Vuelve a conectar el USB (mismo modo) y ejecuta **`PASO 2 - CONFIG (USB).bat`** → copia configs, BIOS, N64, carátulas, plugins… y **ajusta tu RetroArch solo** (driver `gl` para shaders, carpetas, combo del menú), con copia de seguridad `.retroxam.bak`.
+5. Verás el progreso (por bloques y por MB). Al final **"=== TERMINADO ==="**.
+6. Desconecta, **REINICIA la consola** y abre RetroXam.
+
+*(¿Repetir es seguro? Sí: cada PASO salta lo que ya está = `+0 copiados`.)*
 
 ### 🅱 FTP — sin cable (por WiFi)
 
@@ -117,8 +124,9 @@ Con este manual tu PS Vita queda con:
 | `ux0:/data/retroxam/` | El ZIP completo de carátulas |
 | `ux0:/tai/` | **kubridge + fd_fix** (Flycast) + añade las 2 líneas al `config.txt` (con copia de seguridad `.retroxam.bak`) |
 | `ux0:/PSP_1toque/` | El extra del PSP "1 toque" |
+| `ux0:/data/retroarch/retroarch.cfg` | **Se ajusta solo** (v2.4.1): driver `gl` para shaders, carpetas y combo del menú — con copia `.retroxam.bak` |
 
-> 🔁 **Al terminar: REINICIA la consola UNA vez** (así se activan kubridge + fd_fix para el Dreamcast).
+> 🔁 **Al terminar el PASO 2: REINICIA la consola UNA vez** (así se activan kubridge + fd_fix y los ajustes de RetroArch).
 
 ### ✍️ A mano (sin instalador)
 
@@ -131,6 +139,8 @@ Con este manual tu PS Vita queda con:
 ## ⚙️ PARTE 3 — Instalar los VPKs
 
 En **VitaShell**, ve a `ux0:/` y pulsa **X sobre cada .vpk** → confirma. **En este orden**:
+
+> 💡 **Flujo 2 PASOS**: instala las VPKs **entre el PASO 1 y el PASO 2** (así el PASO 2 lo configura todo con RetroArch ya instalado).
 
 1. `RetroXam.vpk` — el launcher (v2.4)
 2. `PIBConfig.vpk` — **ábrelo y pulsa X** (1 segundo; instala las librerías). Cierra.
@@ -157,7 +167,7 @@ En **VitaShell**, ve a `ux0:/` y pulsa **X sobre cada .vpk** → confirma. **En 
 - ✅ **Shaders**: CRT para las de TV (crt-pi), LCD para Game Boy (lcd3x) y nitidez para GBA (sharp-bilinear). Se activan por core solos.
 - **Respaldo manual** (solo si algo fallara): extraer `Config_RetroXam_Piglet.zip` en `ux0:/data/retroarch/` con VitaShell.
 - **Cambiar shader a mano**: con un juego abierto → **Quick Menu → Shaders** (solo existe en la build piglet ✓) → elige otro → guarda con **Save Core Override**.
-- Si algún juego saliera con la imagen movida: ábrelo con **Ajustes → Vídeo → Escalado** → "Relación de aspecto: **Personalizada**" y pon el viewport del LEEME del pack (4:3 = 120/2/720/540 · GB/GBC = 240/56/480/432 · GBA = 156/56/648/432) → **guardar override del core**.
+- ¿Imagen **desplazada** alguna vez (raro, le pasa a algún core)? **1º cierra y reabre el juego** (suele recentrarse solo). Si sigue: con el juego abierto **L + R + START + SELECT** = menú → **Ajustes → Vídeo → Escalado** → "Relación de aspecto: **Personalizada**" + viewport de su sistema (4:3 = 120/2/720/540 · GB/GBC = 240/56/480/432 · GBA = 156/56/648/432) → Quick Menu → Overrides → **Save Core Override**.
 
 ---
 
@@ -229,6 +239,16 @@ La Vita lleva el chip de PSP dentro: Adrenaline lo usa directamente. Compatibili
 4. Es **experimental** en la Vita (~50%): empieza por los 2D, fighting y carreras ligeras. Si un juego va con tirones, no es tu Vita — es el emulador.
 
 > 🔧 Flycast necesita **kubridge + fd_fix**: el instalador los deja configurados solos. Si algún día ves el error *"kubridge.skprx is outdated"*, pasa otra vez el instalador (pone la versión buena) y reinicia.
+
+---
+
+## 🛰️ Usar RetroXam FUERA de casa (y compartirlo)
+
+- **Los puentes de tu casa** (`192.168.2.…`) solo existen en tu red local: fuera **no se ven, y es normal**.
+- Fuera quedan dos vías: el **acceso público del Mac** (`https://servi.tail31979d.ts.net:10000`, ya viene dentro de la app) — necesita el **Mac encendido** — y **archive.org directo** (solo si ese WiFi no lo bloquea; muchos proveedores españoles lo capan los findes de partido).
+- **v2.4.1**: al empezar una descarga, el launcher **prueba los espejos y salta los que no responden** (la primera descarga tarda unos segundos más; después va directo a lo que funciona).
+- **Para compartir**: el acceso público va dentro del pack → **otra Vita solo tiene que instalar y jugar**. (También puede poner su propio puente en **Ajustes → Puente**.)
+- Truco: desde el móvil abre `https://servi.tail31979d.ts.net:10000/ping` → si responde, la puerta pública está abierta.
 
 ---
 
@@ -327,11 +347,12 @@ python descargar_vita.py --repo https://github.com/servixam-max/RetroXamVita --o
 | Las descargas fallan | Que el Mac o el PC estén encendidos y SELECT → START diga `PC OK`. Diagnóstico: **Ajustes → Ver registro** |
 | **Instalador USB**: ¿está haciendo algo? | Ahora muestra progreso (bloques y MB). Si en una 2ª pasada todo dice `+0 copiados, ya estaban` = ya está todo ✓. El "pulsa una tecla" final es solo cerrar |
 | **USB**: la Vita no aparece como unidad | VitaShell → START → SELECT = **USB** → O → SELECT, cable de datos, y espera; si no, usa la vía **FTP** |
-| A veces la imagen sale **movida** (fuera del marco) | Con la v2.4 no debería pasar (auto-config). Si aún así: **Ajustes → Vídeo → Escalado** → "Relación de aspecto: Personalizada" + viewport de la tabla de la Parte 4 → guardar override del core |
+| Sale la imagen **desplazada** de su marco (le pasa a veces a algún core, p. ej. NES) | **Lo más rápido**: cierra RetroArch (botón PS → cierra su tarjeta) y reabre el juego desde RetroXam → vuelve centrado. **A mano**: con el juego abierto pulsa **L + R + START + SELECT** a la vez (menú) → **Ajustes → Vídeo → Escalado** → "Relación de aspecto: **Personalizada**" → pon los números de su sistema (Parte 4) → Quick Menu → Overrides → **Save Core Override**. **Reparar la config sin PC**: en VitaShell borra `ux0:/data/retroarch/retroxam_cfg_ver.txt` y abre RetroXam (verás "Instalando config RetroXam…") |
 | **PSP**: no arranca directo desde RetroXam | Es lo normal sin el extra: se abre Adrenaline y eliges el juego. Para el "1 toque": instala el extra de `PSP_1toque\LEEME` |
 | **PSP**: un juego no aparece en Adrenaline | Debe estar en `ux0:/pspemu/ISO/` (el launcher lo pone ahí solo). Refresca con O → volver a entrar |
 | **Flycast**: "kubridge.skprx is outdated" | Pasa otra vez el instalador (pone la versión correcta) y **reinicia** la consola |
 | **PSVitaAlive** no carga el catálogo | Instala **iTLS-Enso.vpk** (kit) y reinicia |
+| Los **shaders** no se notan | El pack pone el driver `gl` solo (v2.4.1): tras instalar, abre RetroXam una vez (aplica el ajuste) y reinicia RetroArch. Necesita PIBConfig + ShaRKBR33D hechos (una vez). |
 | Quiero otro tema o textos más grandes | **SELECT → Ajustes** → Tema / Texto (se guarda solo) |
 | Quiero borrar juegos para hacer sitio | Mantén **Triángulo** sobre el juego y confirma con **X** |
 | Error **0x8010113D** al instalar la VPK | Usa las VPKs actualizadas del kit (iconos 128×128 8-bit ya corregidos) |
@@ -356,10 +377,11 @@ Los marcos con el logo de cada consola y la seta 🍄 **se instalan solos con la
 ## 🌈 EXTRA 3 — Shaders (scanlines CRT / LCD) — referencia
 
 - **La build piglet** (kit) + `PIBConfig` + `ShaRKBR33D` = menú **Shaders** activo dentro de RetroArch.
+- **El pack lo deja TODO listo** (v2.4.1): el driver `gl`, la carpeta de shaders y los presets por core se configuran **solos** al instalar / abrir RetroXam.
 - **A mano**: **Quick Menu → Shaders → Load Shader Preset** → `crt/crt-pi.glslp` (TV) o `lcd/lcd3x.glslp` (Game Boy). Los pesados (crt-geom) van lentos: quédate con `crt-pi`, `lcd3x` o `sharp-bilinear-simple`. Fija el que te guste con **Save Core Override**.
 - **La v2.4 ya deja elegidos los mejores por core** (CRT para consolas de TV, LCD para GB/GBC, nitidez para GBA). No hay que tocar nada.
 
 ---
 
-*MANUAL - RetroXam Vita — launcher v2.4 · 18 sistemas · ~2.200 juegos · RetroArch (piglet) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive*
+*MANUAL - RetroXam Vita — launcher v2.4.1 · 18 sistemas · ~2.200 juegos · RetroArch (piglet) + DaedalusX64 + OpenBOR + Adrenaline + Flycast + PSVitaAlive*
 *Listas: `github.com/servixam-max/RetroXamVita` · Carátulas: `github.com/servixam-max/RetroXamVitaCovers`*
